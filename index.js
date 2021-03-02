@@ -2974,7 +2974,7 @@ break
 					uptime = process.uptime()
 					teks = `*Nome do bot* : ${me.name}\n*Número do bot* : @${me.jid.split('@')[0]}\n*Prefixo* : ${prefix}\n*Contatos bloqueados* : ${blocked.length}\n*O bot está ativo em* : ${kyun(uptime)}\n\n*Digite .dono para ver a info do dono*`
 					buffer = await getBuffer(me.imgUrl)
-					client.sendMessage(from, buffer, text, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
+					client.sendMessage(from, buffer, text, {caption: teks, contextInfo:{"mentionedJid": [me.jid]}})
 					break
                 case 'blowjob':
 					ranp = getRandom('.gif')
