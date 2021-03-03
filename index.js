@@ -2978,7 +2978,7 @@ break
 						return;
 					}
 					buffer = await getBuffer(me.imgUrl)
-					client.sendMessage(from, buffer, text, {caption: teks, contextInfo:{"mentionedJid": [me.jid]}})
+					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
                 case 'blowjob':
 					ranp = getRandom('.gif')
