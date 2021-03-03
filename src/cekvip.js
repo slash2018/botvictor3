@@ -12,4 +12,5 @@ const cekvip = () => {
 
 *VOCE E UM MEMBRO PREMIUM* ⚜️🚩`
 }
-exports.cekvip = cekvip
+const _cekvip = cekvip
+export { _cekvip as cekvip }

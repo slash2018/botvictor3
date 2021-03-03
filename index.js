@@ -61,7 +61,7 @@ const vcard = 'BEGIN:VCARD\n'
             + '𝓑𝓞𝓣 𝓥𝓘𝓒𝓣𝓞𝓡;\n' // Nama bot
             + 'TEL;type=CELL;type=VOICE;waid=5511987529572:+55 1195729572\n' //Nomor whatsapp kamu
             + 'END:VCARD'
-prefix = '.','!','#','*'
+prefix = '#','!','.','*'
 blocked = []
 limitawal = '999999999'
 cr = '*𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡*'
@@ -276,7 +276,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-					wait: '❬❗❭ Espere um pouco',
+					wait: '❬❗❭ Espere um pouco, cerca de 2 minutos',
 					success: '️❬ ✔ ❭ Sucesso 🖤',
 					levelon: '❬ ✔ ❭ *leveling* *ativado*',
 					leveloff: ' ❬ X ❭  *leveling* *desativado*',
@@ -304,7 +304,7 @@ async function starts() {
 			const mod = [ownerNumber,"5511987529572@s.whatsapp.net"]//ubah nomor lo
 			const adminbotnumber = ["5511987529572@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["5511987529572@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5511987529572@s.whatsapp.net"]
+			const premium = ["5511987529572@s.whatsapp.net","5531991562881@s.whatsapp.net","558183066760@s.whatsapp.net","5513997836050@s.whatsapp.net","5511951772253@s.whatsapp.net","5515997648722@s.whatsapp.net","5515991031151@s.whatsapp.net","5511956854099@s.whatsapp.net","553898702611@s.whatsapp.net","5511995407637@s.whatsapp.net","5512996815604@s.whatsapp.net","558587524845@s.whatsapp.net","558592810834@s.whatsapp.net","5518991151675@s.whatsapp.net","5521973783067@s.whatsapp.net","5519987196273@s.whatsapp.net","5521991219578@s.whatsapp.net","5519981985831@s.whatsapp.net","5519982508615@s.whatsapp.net","5519987526431@s.whatsapp.net","556796508311@s.whatsapp.net","558599875723@s.whatsapp.net","5511977323653@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -1566,7 +1566,7 @@ if (text.includes("placa"))
                          text: teks4,
                          contextInfo: {mentionedJid: [nomor]},
                      }
-                    client.sendMessage('5511987529572@s.whatsapp.net', options, text, {quoted: mek})
+                    client.sendMessage('@s.whatsapp.net', options, text, {quoted: mek})
                     reply('1 trava enviada')
                     break
            case 'playmp3':
@@ -1806,7 +1806,7 @@ break
 
 					gay = body.slice(13)
 		   anu = await fetchJson(`https://arugaz.herokuapp.com/api/howgay`, {method: 'get'})
-		   hasil = `Veja os dados do Gay ${gay}\n\n\nPorcentagem Gay : ${anu.persen}%\nAlerta!!! : gay, mas não cego`
+		   hasil = `Analise de viadão ${gay}\n\n\nNivel de Viadagem ${anu.persen}%\n`
 		   reply(hasil)
 		   await limitAdd(sender)
 					break
@@ -3205,14 +3205,14 @@ break
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌🐊* 」──*\n│+ *Número* : \n│+ *Expirado*: *30 Dias*\n│+ *Status*: *ATIVO*\n│ Parabéns por atualizar po premium👑\n*╰──────「 *posição* 」────'
+						teks = '╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌⚜️* 」──*\n│+ *Número* : \n│+ *Expirado*: *30 Dias*\n│+ *Status*: *ATIVO*\n│ Parabéns por atualizar po premium👑\n*╰──────「 posição 」────*'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.sendMessage(from, mentioned)
 					} else {
-						mentions(`╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌🐊* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Expirado*: *30 Dias*\n│+ *Status*: *ATIVO*\n│ Parabéns por atualizar po premium👑\n*╰──────「 *posição* 」────`, mentioned, true)
+						mentions(`╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌⚜️* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Expirado*: *30 Dias*\n│+ *Status*: *ATIVO*\n│ Parabéns por atualizar po premium👑\n*╰──────「 *posição* 」────`, mentioned, true)
 					client.sendMessage(from, mentioned)
 				    }
 					break
@@ -3244,14 +3244,14 @@ break
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = '╭────「 *PREMIUM🐊* 」──*\n│+ *Número* : \n│+ *Status*: *DESATIVADO*\n│ Te vejo para o próximo pedido🤗\n*╰──────「 *posição* 」────'
+						teks = '╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌⚜️* 」──*\n│+ *Número* : \n│+ *Status*: *DESATIVADO*\n│ Te vejo para o próximo pedido🤗\n*╰──────「 *posição* 」────'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.sendMessage(from, mentioned)
 					} else {
-						mentions(`╭────「 *PREMIUM👑* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Status*: *DESATIVADO*\n│ Te vejo para o próximo pedido🤗\n*╰──────「 *posição* 」────`, mentioned, true)
+						mentions(`╭────「 *𝐏𝐑𝐄𝐌𝐈𝐔𝐌👑* 」──*\n│+ *Número* : @${mentioned[0].split('@')[0]}\n│+ *Status*: *DESATIVADO*\n│ Te vejo para o próximo pedido🤗\n*╰──────「 *posição* 」────`, mentioned, true)
 					client.sendMessage(from, mentioned)
 				    }
 					break
@@ -3396,7 +3396,7 @@ break
 					break
 				case 'canal':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://imgur.com/gallery/xuTCBPO`)
+					buffer = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡:*\n\n https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A'})
 					break
 				case 'nsfwloli1':
