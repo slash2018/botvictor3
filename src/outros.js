@@ -19,7 +19,6 @@ const iklan = () => {
 ╠🐊 *${prefix}limpar*
 ╠🐊 *${prefix}bc [ *texto* ]*
 ╠🐊 *${prefix}bemvindo [1/0]*
-╠🐊 *${prefix}clonar [@]*
 ╠🐊 *${prefix}help1*
 ╠🐊 *${prefix}dono*
 ╠🐊 *${prefix}owner*

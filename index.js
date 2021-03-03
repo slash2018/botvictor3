@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\nBem vindo ao grupo *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\nEspero que goste do grupo🤝🏻 \nNÃO SEJA UM GHOST\n\n\n`
+				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -235,7 +235,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Tchau @${num.split('@')[0]} Ja foi tarde 😂👋\nEra ghost mesmo, nem vai fazer falta, te odeio`
+				teks = `Tchau @${num.split('@')[0]} La se vai o Corno 😂👋\nTriste, abandonado e sozinho.`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -589,7 +589,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("oii")){
+				if (messagesC.includes("Olá")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/ola.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1759,7 +1759,7 @@ case 'bv':
 tujuh = fs.readFileSync('./assets/bv.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'tchau':
+case 'Tchau':
 tujuh = fs.readFileSync('./assets/tchau.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
@@ -3451,7 +3451,7 @@ break
 					break
 				case 'dono':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
+					buffer = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡\n*YOUTUBE:* https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A\n*WPP:* wa.me/+5511987529572\n*INSTA:* sai\n\n\nEspero que tenham gostado do bot 🐊⚜️'})
 					break
 				case 'setprefix':
@@ -3768,7 +3768,7 @@ break
 						reply('1 para ativar, 0 para desativar, lerdão vc em KAKKKK')
 					}
                                       break
-				case 'clonar':
+				case '':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Marque a pessoa que você quer clonar\n\n*EXEMPLO:* clone @')

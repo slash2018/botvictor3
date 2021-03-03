@@ -55,7 +55,6 @@ const help = (prefix) => {
 ║🐊 *${prefix}limpar*
 ║🐊 *${prefix}bc [ *texto* ]*
 ║🐊 *${prefix}bemvindo [1/0]*
-║🐊 *${prefix}clonar [@]*
 ║🐊 *${prefix}help1*
 ║🐊 *${prefix}dono*
 ║🐊 *${prefix}owner*
@@ -150,7 +149,6 @@ const help = (prefix) => {
 ╠══✪〘 𝐄𝐒𝐏𝐄𝐂𝐈𝐅𝐈𝐂𝐎 𝐃𝐎 𝐁𝐎𝐓 〙✪══
 ║
 ║🤖 *${prefix}bug [sua mensagem]*
-║🤖 *${prefix}clonar [@]*
 ║🤖 *${prefix}dono*
 ║🤖 *${prefix}ping [ver velocidade do bot]*
 ║🤖 *${prefix}termux*
