@@ -59,7 +59,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡\n' // Nama kamu
             + '𝓑𝓞𝓣 𝓥𝓘𝓒𝓣𝓞𝓡;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=5511987529572:+55 1195729572\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=5511987529572:+55 11987529572\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '#','!','.','*'
 blocked = []
@@ -3357,22 +3357,22 @@ break
 					break
 				case 'hentai':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/8U9GwX4.jpg`)
+					buffer = await getBuffer(`https://i.imgur.com/XJB74uF.png`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Cara bate pra 2d 😂'})
 					break
 				case 'bomdia':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/7VL9cFf.jpg`)
+					buffer = await getBuffer(`https://i.imgur.com/DXVZ8vs.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Bom dia, vcs sao fodas ❤️'})
 					break
 				case 'boatarde':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/JaO3yoV.jpg`)
+					buffer = await getBuffer(`https://i.imgur.com/nSnRCIK.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Boa tarde, rapeize 😎👍'})
 					break
 				case 'boanoite':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/yOFxSUR.jpg`)
+					buffer = await getBuffer(`https://i.imgur.com/KbItFd7.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Boa noite fml ❤️'})
 					break
                 case 'belle':                 

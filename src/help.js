@@ -206,7 +206,7 @@ const help = (prefix) => {
 ╠══✪〘 𝐈𝐍𝐓𝐄𝐑𝐀𝐓𝐈𝐕𝐎𝐒 〙✪══
 ║
 ╠══NOTA »
-║Mandar a msg sem o prefixo
+║*Mandar a msg sem o prefixo*
 ╠════════════════════
 ║
 ║🐊 *bah*

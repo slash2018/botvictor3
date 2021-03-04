@@ -3,7 +3,7 @@ const chentai = () => {
 	
 	*𝐎𝐋𝐀́ 👋👋* *𝑷𝑬𝑮𝑼𝑬 𝑺𝑬𝑼𝑺 𝑪𝑶́𝑫𝑰𝑮𝑶𝑺 𝑫𝑬 𝑯𝑬𝑵𝑻𝑨𝑰 😏*
 
-Código Nuclear [Doujin Hentai gênero NTR] (Netorare)
+*Código Nuclear [Doujin Hentai gênero NTR] (Netorare)*
 
 Modo Gampang :
 • https://nhentai.net/g/316755/
