@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `oie @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
+				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -235,7 +235,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Tchau @${num.split('@')[0]} La se vai o Corno 😂👋\nTriste, abandonado e sozinho.`
+				teks = `tchau @${num.split('@')[0]} La se vai o Corno 😂👋\nTriste, abandonado e sozinho.`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -589,7 +589,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("oie")){
+				if (messagesC.includes("ola")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/ola.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1759,7 +1759,7 @@ case 'bv':
 tujuh = fs.readFileSync('./assets/bv.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'Tchau':
+case 'tchau':
 tujuh = fs.readFileSync('./assets/tchau.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
