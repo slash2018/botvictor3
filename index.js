@@ -3112,7 +3112,7 @@ break
 							.toFormat('webp')
 							.save(ran)*/
 					} else {
-						reply(`Envie fotos com legendas *.f* ou marque uma imagem que já foi enviada`)
+						reply(`Envie fotos ou gif com a legendas *#f* ou marque uma imagem que já foi enviada`)
 					}
 					break
 				case 'tts':
