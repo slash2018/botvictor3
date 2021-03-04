@@ -1,6 +1,6 @@
 const lista = () => { 
 	return `
-	#RenegadosDeKonohaRDK
+	
 
 
 `

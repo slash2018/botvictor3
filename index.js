@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
+				teks = `oie @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -555,7 +555,7 @@ if (text.includes("placa"))
 	
 	if (messagesC.includes("fdp")){
 			client.updatePresence(from, Presence.composing)
-			reply("teu pai")
+			reply("teu pai aquele corno")
 	}
 	
 		if (messagesC.includes("corno")){
@@ -565,7 +565,7 @@ if (text.includes("placa"))
 	
 		if (messagesC.includes("tmnc")){
 			client.updatePresence(from, Presence.composing)
-			reply("vai vc, tu ja me disse q é mo bom")
+			reply("vai vc, arrombado")
 	}
 	
 		if (messagesC.includes("vsfd")){
@@ -573,7 +573,7 @@ if (text.includes("placa"))
 			reply("bora juntos?")
 	}
 	
-		if (messagesC.includes("cadebot")){
+		if (messagesC.includes("cade")){
 			client.updatePresence(from, Presence.composing)
 			reply("olha eu aqui carai")
 	}
@@ -589,13 +589,13 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("Olá")){
+				if (messagesC.includes("oie")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/ola.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-			if (messagesC.includes("Dbz")){
+			if (messagesC.includes("dbz")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/Dbz.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1751,7 +1751,7 @@ case 'onich':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-case 'ola':
+case 'oii':
 tujuh = fs.readFileSync('./assets/ola.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
