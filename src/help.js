@@ -21,6 +21,8 @@ const help = (prefix) => {
 ║🐊 *${prefix}wame*
 ║🐊 *${prefix}spamcall*
 ║🐊 *${prefix}play (nome da msc)*
+║🐊 *${prefix}pub*
+║🐊 *${prefix}gglogo*
 ║
 ╠══✪〘 𝐌𝐄𝐍𝐔 〙✪══
 ║

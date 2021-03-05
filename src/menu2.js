@@ -13,6 +13,8 @@ const menu2 = (prefix) => {
 ╠🐊 *${prefix}leens [na legenda]*
 ╠🐊 *${prefix}wait [na legenda]*
 ╠🐊 *${prefix}setprefix*
+║🐊 *${prefix}pub*
+║🐊 *${prefix}gglogo*
 ║
 ╠══✪〘 𝐈𝐌𝐀𝐆𝐄𝐍𝐒 〙✪══
 ║
