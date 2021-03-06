@@ -589,7 +589,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("ola")){
+				if (messagesC.includes("oi")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/ola.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -3640,19 +3640,19 @@ break
 					case 'gglogo':
 					if (args.length < 1) return reply(mess.blank)
 					teks = body.slice(7)
-					if (teks.length > 15) return reply('O texto é longo, até 15 caracteres')
+					if (teks.length > 50) return reply('O texto é longo, até 50 caracteres')
 					reply('Estou fazendo, se der erro tente novamente ✓')
 					buffer = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/gg2.jpeg?text.0.text=${teks}&text.0.position.gravity=north&text.0.position.x=-12%25&text.0.position.y=44%25&text.0.size=11&text.0.color=130e0e`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'PRONTINHO ✓'})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*PRONTINHO ✓*'})
 					break
 					//google implemente o parametro text, para um foto
                                         //com o texto escolhido na aba search.
              case 'pub':
 					if (args.length < 1) return reply(mess.blank)
-					dar = body.slice(7)					
+					teks = body.slice(7)					
 					if (teks.length > 15) return reply('O texto é longo, até 15 caracteres')
 					reply('Estou fazendo, se der erro tente novamente ✓')
-					buffer = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/pubg.png?profile=Example&text.0.text=${dar}&text.0.size=52&text.0.outline.color=0050ff&text.0.outline.blur=100&text.1.text=${dar}&text.1.size=51&text.1.background.color=002fff&text.1.outline.color=005cff&text.1.outline.blur=100`)
+					buffer = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/pubg.png?profile=Example&text.0.text=${teks}&text.0.size=52&text.0.outline.color=0050ff&text.0.outline.blur=100&text.1.text=${teks}&text.1.size=51&text.1.background.color=002fff&text.1.outline.color=005cff&text.1.outline.blur=100`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'PRONTINHO ✓'})
 					break
 					//text parametro monta uma foto template simples
