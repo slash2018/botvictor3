@@ -536,7 +536,7 @@ if (text.includes("placa"))
 		}, 0)
 	}
 	
-		        if (messagesC.includes("https://m.kwai.app/")){
+		        if (messagesC.includes("https://")){
 		if (!isGroup) return
 		if (!isAntiLink) return
 		if (isGroupAdmins) return reply('vc é admin, então n irei te dar ban por usar links, rlx 🙂')
