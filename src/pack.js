@@ -1,5 +1,5 @@
-const pack = (prefix) => {
- return  `
+const pack = () => { 
+	return `
  
       *PACKS:*
     
@@ -15,7 +15,6 @@ Misaki Your Waifu: https://photos.app.goo.gl/M9nyHdonAJu5GRjZ9
 
 pack: https://photos.app.goo.gl/SrogbCbnanL2PJQn7 
 
-Love Lilah : https://photos.app.goo.gl/TBbkjGGdAVHjPFt5A 
-`
+Love Lilah : https://photos.app.goo.gl/TBbkjGGdAVHjPFt5A `
 }
 exports.pack = pack

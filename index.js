@@ -534,8 +534,28 @@ if (text.includes("placa"))
 			client.updatePresence(from, Presence.composing)
 			reply("menos de 1 segundo KKKKKKKK tchau otário 😔🤙")
 		}, 0)
+
+    }
+	         if (messagesC.includes("Venha ganhar dinheiro")){
+		if (!isGroup) return
+		if (!isAntiLink) return
+		if (isGroupAdmins) return reply('vc é admin, então n irei te dar ban por usar links, rlx 🙂')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#permissão de administrador aceita")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em menos de 1 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 10)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("falta menos de sei lá quantos milésimos kkkkkkk")
+		}, 500)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("menos de 1 segundo KKKKKKKK tchau otário 😔🤙")
+		}, 0)
 	}
-	
 		        if (messagesC.includes("https://")){
 		if (!isGroup) return
 		if (!isAntiLink) return
@@ -2142,7 +2162,7 @@ break
 						antilink.push(from)
 						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
 						reply('Grupo anti-link ativado com sucesso neste grupo ✔️')
-						client.sendMessage(from,`Atencao a todos os membros ativos deste grupo anti-link. se você enviar um link de grupo, voce sera expulso daqui  grupo`, text)
+						client.sendMessage(from,`*Atenção a todos os membros, quem mandar link, será banido!*`, text)
 					} else if (Number(args[0]) === 0) {
 						if (!isantilink) return reply('O modo de grupo anti-link foi desabilitado ')
 						var ini = anti.clientOf(from)
