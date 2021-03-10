@@ -14,8 +14,7 @@ const help = (prefix) => {
 ║⚜️ *${prefix}chentai [premium]*
 ║⚜️ *${prefix}gcpf [premium]*
 ║🐊 *${prefix}gay [@]*
-║⚜️ *${prefix}gbin [premium]*
-║⚜️ *${prefix}pack [premium]*
+║⚜️ *${prefix}packs [premium]*
 ║⚜️ *${prefix}destrava [premium]*
 ║⚜️ *${prefix}gpessoa [premium]*
 ║🐊 *${prefix}wame*

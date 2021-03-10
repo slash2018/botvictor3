@@ -793,7 +793,7 @@ if (text.includes("placa"))
                     if (!isPremium) return reply(mess.only.premium)
                     client.sendMessage(from, modapk(prefix), text, { quoted: mek })
                     break
-                   case 'gbin':
+                   case 'packs':
                     if (!isPremium) return reply(mess.only.premium)
                     client.sendMessage(from, gbin(prefix), text, { quoted: mek })
                     break
