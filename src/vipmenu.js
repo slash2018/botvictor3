@@ -13,8 +13,7 @@ const vipmenu = (prefix) => {
 ╠⚜️ *${prefix}qrcode*
 ╠⚜️ *${prefix}chentai*
 ╠⚜️ *${prefix}gcpf*
-╠⚜️ *${prefix}gbin*
-╠⚜️ *${prefix}pack*
+╠⚜️ *${prefix}packs*
 ╠⚜️ *${prefix}destrava*
 ╠⚜️ *${prefix}gpessoa*
 ║
