@@ -227,7 +227,7 @@ async function starts() {
 				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: './assets/ola.mp3', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
@@ -522,7 +522,7 @@ if (text.includes("placa"))
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#permissão de administrador aceita")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em menos de 1 segundos`)
+		reply(`*Link detectado! ${sender.split("@")[0]} Vai enviar link na buceta da sua mãe*`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
@@ -535,7 +535,7 @@ if (text.includes("placa"))
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#permissão de administrador aceita")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em menos de 1 segundos`)
+		reply(`*Link detectado!* ${sender.split("@")[0]} *Vai enviar link na buceta da sua mãe*`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
@@ -548,7 +548,7 @@ if (text.includes("placa"))
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#permissão de administrador aceita")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em menos de 1 segundos`)
+		reply(`*Link detectado!* ${sender.split("@")[0]} *Vai enviar link na buceta da sua mãe*`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
@@ -561,41 +561,11 @@ if (text.includes("placa"))
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#permissão de administrador aceita")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em 1 segundos`)
+		reply(`*Link detectado!* ${sender.split("@")[0]} *Vai enviar link na buceta da sua mãe*`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
 
-	}
-	
-	if (messagesC.includes("fdp")){
-			client.updatePresence(from, Presence.composing)
-			reply("teu pai aquele corno")
-	}
-	
-		if (messagesC.includes("corno")){
-			client.updatePresence(from, Presence.composing)
-			reply("vsfd seu merda")
-	}
-	
-		if (messagesC.includes("tmnc")){
-			client.updatePresence(from, Presence.composing)
-			reply("vai vc, arrombado")
-	}
-	
-		if (messagesC.includes("vsfd")){
-			client.updatePresence(from, Presence.composing)
-			reply("bora juntos?")
-	}
-	
-		if (messagesC.includes("cade")){
-			client.updatePresence(from, Presence.composing)
-			reply("olha eu aqui carai")
-	}
-	
-		if (messagesC.includes("bot")){
-			client.updatePresence(from, Presence.composing)
-			reply("oi")
 	}
 	
 			if (messagesC.includes("bah")){
