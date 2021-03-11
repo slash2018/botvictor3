@@ -491,7 +491,7 @@ if (text.includes("placa"))
 		reply(`tchau racista ${sender.split("@")[0]} voce sera expulso deste grupo em 2 segundos`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
-		}, 2000)
+		}, 10)
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
 			reply("2 segundo KKKKKKKK tchau otário 😔🤙")
@@ -526,14 +526,6 @@ if (text.includes("placa"))
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("falta menos de sei lá quantos milésimos kkkkkkk")
-		}, 500)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("menos de 1 segundo KKKKKKKK tchau otário 😔🤙")
-		}, 0)
 
     }
 	         if (messagesC.includes("https://www.kbxmo.cn/")){
@@ -547,14 +539,6 @@ if (text.includes("placa"))
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("falta menos de sei lá quantos milésimos kkkkkkk")
-		}, 500)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("menos de 1 segundo KKKKKKKK tchau otário 😔🤙")
-		}, 0)
 
 	}
 	         if (messagesC.includes("https://m.kwai.app/")){
@@ -568,14 +552,7 @@ if (text.includes("placa"))
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 10)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("falta menos de sei lá quantos milésimos kkkkkkk")
-		}, 500)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("menos de 1 segundo KKKKKKKK tchau otário 😔🤙")
-		}, 0)
+	
 	}
 		        if (messagesC.includes("https://")){
 		if (!isGroup) return
@@ -587,11 +564,8 @@ if (text.includes("placa"))
 		reply(`link detectado ${sender.split("@")[0]} voce sera expulso deste grupo em 1 segundos`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
-		}, 1000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("1 segundo KKKKKKKK tchau otário 😔🤙")
-		}, 0)
+		}, 10)
+
 	}
 	
 	if (messagesC.includes("fdp")){
