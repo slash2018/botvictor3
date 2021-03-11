@@ -227,7 +227,9 @@ async function starts() {
 				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: './assets/ola.mp3', ptt:true})
+				client.updatePresence(from, Presence.composing)
+			    tujuh = fs.readFileSync('./assets/ola.mp3');
+                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
