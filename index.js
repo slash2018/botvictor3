@@ -3734,6 +3734,7 @@ break
 					})
 					break
 				case 'simi':
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Onde está o texto, hum?')
 					teks = body.slice(5)
 					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
