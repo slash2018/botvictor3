@@ -611,6 +611,12 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
+		if (messagesC.includes("joao")){
+		client.updatePresence(from, Presence.composing)
+		tujuh = fs.readFileSync('./assets/joao.mp3');
+		client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
 				if (messagesC.includes("mandememe")){
 			client.updatePresence(from, Presence.composing)
 			data = fs.readFileSync('./src/darkjokes.js');
