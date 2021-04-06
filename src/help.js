@@ -22,6 +22,9 @@ const help = (prefix) => {
 ║🐊 *${prefix}play (nome da msc)*
 ║🐊 *${prefix}pub*
 ║🐊 *${prefix}gglogo*
+║🐊 *${prefix}dbz*
+║🐊 *${prefix}sandra*
+║🐊 *${prefix}juh*
 ║
 ╠══✪〘 𝐌𝐄𝐍𝐔 〙✪══
 ║
@@ -217,6 +220,9 @@ const help = (prefix) => {
 ║🐊 *sexo*
 ║🐊 *dbz*
 ║🐊 *mandememe*
+║🐊 *joao*
+║🐊 *sandra*
+║🐊 *sandra1*
 ║
 ╠══✪〘 𝓥𝓘𝓒𝓣𝓞𝓡 𝓝𝓞 𝓒𝓞𝓜𝓐𝓝𝓓𝓞 〙✪══
 ║

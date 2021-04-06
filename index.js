@@ -611,10 +611,22 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-		if (messagesC.includes("joao")){
-		client.updatePresence(from, Presence.composing)
-		tujuh = fs.readFileSync('./assets/joao.mp3');
-		client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+		    if (messagesC.includes("joao")){
+		    client.updatePresence(from, Presence.composing)
+		    tujuh = fs.readFileSync('./assets/joao.mp3');
+		    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+		    if (messagesC.includes("sandra")){
+		    client.updatePresence(from, Presence.composing)
+		    tujuh = fs.readFileSync('./assets/sandra.mp3');
+		    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+	
+		    if (messagesC.includes("sandra1")){
+		    client.updatePresence(from, Presence.composing)
+		    tujuh = fs.readFileSync('./assets/sandra1.mp3');
+		    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
 				if (messagesC.includes("mandememe")){
@@ -3368,6 +3380,16 @@ break
 					buffer = await getBuffer(`https://i.imgur.com/KbItFd7.jpg`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Boa noite fml ❤️'})
 					break
+				case 'sandra':
+					memein = await kagApi.memeindo()
+					buffer = await getBuffer(`https://i.imgur.com/ket3RsD.jpg`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Mãe do miranha 😎 '})
+					break
+				case 'juh':
+					memein = await kagApi.memeindo()
+					buffer = await getBuffer(`https://i.imgur.com/eQCSl0k.jpg`)
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'gostosa que faz live 😎 '})
+					break	
                 case 'belle':                 
 				 data = fs.readFileSync('./src/belle.js');
                  jsonData = JSON.parse(data);
