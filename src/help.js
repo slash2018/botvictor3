@@ -23,7 +23,7 @@ const help = (prefix) => {
 ║🐊 *${prefix}pub*
 ║🐊 *${prefix}gglogo*
 ║🐊 *${prefix}dbz*
-║🐊 *${prefix}sandra*
+║🐊 *${prefix}sandra1*
 ║🐊 *${prefix}juh*
 ║
 ╠══✪〘 𝐌𝐄𝐍𝐔 〙✪══
@@ -221,8 +221,9 @@ const help = (prefix) => {
 ║🐊 *dbz*
 ║🐊 *mandememe*
 ║🐊 *joao*
-║🐊 *sandra*
+║🐊 *miranha*
 ║🐊 *sandra1*
+║🐊 *adm*
 ║
 ╠══✪〘 𝓥𝓘𝓒𝓣𝓞𝓡 𝓝𝓞 𝓒𝓞𝓜𝓐𝓝𝓓𝓞 〙✪══
 ║
@@ -230,7 +231,7 @@ const help = (prefix) => {
 ║ *INSTA: https://www.instagram.com/gamerlagado/*
 ║ *WPP: wa.me/+55119875295727*
 ║ *YOUTUBE: https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A*
-║ *𝐒𝐇𝐈𝐓𝐏𝐎𝐒𝐓 𝐄𝐋𝐈𝐓𝐄⚜️: https://chat.whatsapp.com/Eedio1m9BcO6YpY8vDE2p7
+║ *𝐒𝐇𝐈𝐓𝐏𝐎𝐒𝐓 𝐄𝐋𝐈𝐓𝐄⚜️: https://chat.whatsapp.com/JXJLQ4STVPa2B9eup1GWyn
 ║  
 ║  *"CRINGE MORRE CEDO 🐊👑*
 ║  
