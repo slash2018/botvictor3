@@ -638,7 +638,7 @@ if (text.includes("placa"))
 		   if (messagesC.includes("adm")){
 		   client.updatePresence(from, Presence.composing)
 		   tujuh = fs.readFileSync('./assets/wpp1.mp4');
-		   client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+		   client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 	}
 	
 				if (messagesC.includes("mandememe")){
