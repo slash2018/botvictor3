@@ -757,19 +757,36 @@ if (text.includes("placa"))
 				case 'cripto':
 					if (args.length < 1) return reply('Cadê o código da Cripto tio?');
 					const cripto = args[0];
-					client.sendMessage(from, `Obtendo cotação do ${cripto}, arguarde...`, text, {quoted: mek});
+					client.sendMessage(from, `Obtendo cotação do ${cripto}, aguarde...`, text, {quoted: mek});
 					var result = await fetchJson(`https://api.coingecko.com/api/v3/coins/${cripto}/tickers`);
 					if(result.tickers){
-						result.tickers.forEach((ticker) => {
-							if(ticker.target == "BRL" && ticker.market.identifier == "binance"){
-								client.sendMessage(from, `
-								Cotação da moeda ${ticker.base}: \n
-								Atual: R$ ${ticker.last} ||
-								Volume: ${ticker.volume}`,text, {quoted: mek})
-							}
-						});
+						let ticker = result.tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
+						
+						if(!ticker){
+							ticker = result.tickers.find(x => x.target == "BRL");
+						}
+						
+						if(!ticker){
+							ticker = result.tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
+						}
+
+						if(!ticker){
+							ticker = result.tickers.find(x => x.target == "USD");
+						}
+
+						if(ticker){
+							client.sendMessage(from, `
+							Cotação da moeda ${ticker.base}: \n
+							Valor atual: ${(ticker.target == "BRL" ? "R$" : "$")} ${ticker.last}
+							Volume: ${ticker.volume}
+							Porcentagem do BAS: ${(ticker.bid_ask_spread_percentage*100)}%
+							Info atualizada: ${ticker.is_stale ? "Não" : "Sim"} 
+							\nMercado: ${ticker.market.name}`,text, {quoted: mek});
+						}else{
+							client.sendMessage(from, `Não foi possível encontrar dados para Cripto ${cripto}`,text, {quoted: mek});
+						}
 					}else{
-						return reply(`Nada foi encontrado para cripto ${cripto}, possível erro: ${result}`);
+						return reply(`Nada foi encontrado para cripto ${cripto}, verifique se digitou o código correto`);
 					}
 					break;				
                 case 'ytkomen':
