@@ -199,7 +199,7 @@ async function starts() {
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color('Leia o QR Code'))
+		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
 	})
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
@@ -207,7 +207,7 @@ async function starts() {
 		start('2', 'Quase la...')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado')
+		success('2', 'Conectado leke')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -748,36 +748,44 @@ if (text.includes("placa"))
 					
 					client.sendMessage(from, `Obtendo cotação do ${cripto}, aguarde...`, text, {quoted: mek});
 					
-					var result = await fetchJson(`https://api.coingecko.com/api/v3/coins/${cripto}/tickers`);
-
-					if(result.tickers != null && result.tickers.length > 0){
-						const tickers = result.tickers;
-						let ticker = tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
-						
-						if(ticker == null){
-							ticker = tickers.find(x => x.target == "BRL");
-						}
-						
-						if(ticker == null){
-							ticker = tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
-						}
-
-						if(ticker == null){
-							ticker = tickers.find(x => x.target == "USD");
-						}
-
-						if(ticker != null){
-							client.sendMessage(from, `Cotação da moeda ${ticker.base}: \nValor atual: ${(ticker.target == "BRL" ? "R$" : "$")} ${ticker.last}\nVolume: ${ticker.volume}\nPorcentagem do BAS: ${(ticker.bid_ask_spread_percentage*100)}%\nInfo atualizada: ${ticker.is_stale ? "Não" : "Sim"} \nMercado: ${ticker.market.name}`,text, {quoted: mek});
+					await fetchJson(`https://api.coingecko.com/api/v3/coins/${cripto}/tickers`).then((result) => {
+						if(result.tickers != null){
+							const tickers = result.tickers;
+							var ticker = null;
+							
+							ticker = tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
+							
+							if(ticker == null){
+								ticker = tickers.find(x => x.target == "BRL");
+							}
+							
+							if(ticker == null){
+								ticker = tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
+							}
+	
+							if(ticker == null){
+								ticker = tickers.find(x => x.target == "USD");
+							}
+	
+							if(ticker != null){
+								client.sendMessage(from, `Cotação da moeda ${ticker.base}: \nValor atual: ${(ticker.target == "BRL" ? "R$" : "$")} ${ticker.last}\nVolume: ${ticker.volume}\nPorcentagem do BAS: ${(ticker.bid_ask_spread_percentage*100)}%\nInfo atualizada: ${ticker.is_stale ? "Não" : "Sim"} \nMercado: ${ticker.market.name}`,text, {quoted: mek});
+							}else{
+								client.sendMessage(from, `Não foi possível encontrar dados para Cripto ${cripto}`,text, {quoted: mek});
+							}
 						}else{
-							client.sendMessage(from, `Não foi possível encontrar dados para Cripto ${cripto}`,text, {quoted: mek});
+							return reply(`Nada foi encontrado para cripto ${cripto}, verifique se digitou o código correto`);
 						}
-					}else{
-						return reply(`Nada foi encontrado para cripto ${cripto}, verifique se digitou o código correto`);
-					}
+					});
+
+
 					break;	
 				case 'ativo':
-					if (args.length < 5) return reply('Cadê o código da Ação tio?');
+					if (args.length < 1) return reply('Cadê o código da Ação tio?');
+					
 					const ativo = args[0];
+					
+					if (ativo.length < 5) return reply('Código da Ação fora do padrão seu verme');
+
 					client.sendMessage(from, `Obtendo informações do ativo ${ativo}, aguarde...`, text, {quoted: mek});
 
 					var result = await fetchJson(`https://api.hgbrasil.com/finance/stock_price?key=9ccc1cff&symbol=${ativo}`);
@@ -3998,11 +4006,11 @@ break
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'comando não registrado de', color(sender.split('@')[0]))
+						console.log(color('[ERROR]','red'), 'eita bixo comando não registrado de', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
-			console.log('ERRO : %s', color(e, 'red'))
+			console.log('Error : %s', color(e, 'red'))
 		}
 	})
 }
