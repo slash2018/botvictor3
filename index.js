@@ -714,40 +714,64 @@ if (text.includes("placa"))
 					client.sendMessage(from, bufferz, image, {quoted: mek})
 					break
 				case 'btc':
-						await fetchJson(`https://www.mercadobitcoin.net/api/BTC/ticker/`).then((result)=>{
-							if(result.ticker){
-								client.sendMessage(from, `
-								Alta: ${result.ticker.high}\n 
-								Baixa: ${result.ticker.low}\n
-								Atual: ${result.ticker.last}\n
-								Volume: ${result.ticker.vol}\n`,text)
-							}
-						});
-						break
+					client.sendMessage(from, `Obtendo cotação do BTC, arguarde...`, text, {quoted: mek});
+					await fetchJson(`https://www.mercadobitcoin.net/api/BTC/ticker/`).then((result)=>{
+						if(result.ticker){
+							client.sendMessage(from, `
+							Cotação BTC: \n
+							Alta: ${result.ticker.high} || 
+							Baixa: ${result.ticker.low} ||
+							Atual: ${result.ticker.last} ||
+							Volume: ${result.ticker.vol}`,text, {quoted: mek})
+						}
+					}).catch((error) => { client.sendMessage(from, `O seguinte erro ocorreu: ${error}`, text, {quoted: mek}); });
+					break
 				case 'eth':
+					client.sendMessage(from, `Obtendo cotação do ETH, arguarde...`, text, {quoted: mek});
 					await fetchJson(`https://www.mercadobitcoin.net/api/ETH/ticker/`).then((result)=>{
 						if(result.ticker){
 							client.sendMessage(from, `
-							Alta: ${result.ticker.high}\n 
-							Baixa: ${result.ticker.low}\n
-							Atual: ${result.ticker.last}\n
-							Volume: ${result.ticker.vol}\n`,text)
+							Cotação ETH: \n
+							Alta: ${result.ticker.high} 	|| 
+							Baixa: ${result.ticker.low} 	||
+							Atual: ${result.ticker.last} 	||
+							Volume: ${result.ticker.vol}`, text, {quoted: mek})
 						}
-					});
+					}).catch((error) => { client.sendMessage(from, `O seguinte erro ocorreu: ${error}`, text, {quoted: mek}); });
 					break	
 				case 'doge':
-					await fetchJson(`api.coingecko.com/api/v3/coins/dogecoin/tickers`).then((result)=>{
+					client.sendMessage(from, `Obtendo cotação do DOGE, arguarde...`, text, {quoted: mek});
+					await fetchJson(`https://api.coingecko.com/api/v3/coins/dogecoin/tickers`).then((result)=>{
 						if(result.tickers){
 							result.tickers.forEach(ticker => {
-								if(ticker.target == 'BRL' && ticker.market.name == 'Binance'){
+								if(ticker.target === 'BRL' && ticker.market.identifier === 'binance'){
 									client.sendMessage(from, `
-									Atual: ${ticker.last}\n
-									Volume: ${ticker.volume}\n`,text)
+									Cotação DOGE: \n
+									Atual: ${ticker.last} ||
+									Volume: ${ticker.volume}`,text, {quoted: mek})
 								}
 							});
 						}
-					});
-					break			
+					}).catch((error) => { client.sendMessage(from, `O seguinte erro ocorreu: ${error}`, text, {quoted: mek}); });
+					break
+				case 'cripto':
+					if (args.length < 1) return reply('Cadê o código da Cripto tio?');
+					const cripto = args[0];
+					client.sendMessage(from, `Obtendo cotação do ${cripto}, arguarde...`, text, {quoted: mek});
+					var result = await fetchJson(`https://api.coingecko.com/api/v3/coins/${cripto}/tickers`);
+					if(result.tickers){
+						result.tickers.forEach((ticker) => {
+							if(ticker.target == "BRL" && ticker.market.identifier == "binance"){
+								client.sendMessage(from, `
+								Cotação da moeda ${ticker.base}: \n
+								Atual: R$ ${ticker.last} ||
+								Volume: ${ticker.volume}`,text, {quoted: mek})
+							}
+						});
+					}else{
+						return reply(`Nada foi encontrado para cripto ${cripto}, possível erro: ${result}`);
+					}
+					break;				
                 case 'ytkomen':
 					if (args.length < 1) return reply('Cadê o texto tio?')
 					gh = body.slice(9)
