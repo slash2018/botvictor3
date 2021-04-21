@@ -717,12 +717,7 @@ if (text.includes("placa"))
 					client.sendMessage(from, `Obtendo cotação do BTC, arguarde...`, text, {quoted: mek});
 					await fetchJson(`https://www.mercadobitcoin.net/api/BTC/ticker/`).then((result)=>{
 						if(result.ticker){
-							client.sendMessage(from, `
-							Cotação BTC: \n
-							Alta: ${result.ticker.high} || 
-							Baixa: ${result.ticker.low} ||
-							Atual: ${result.ticker.last} ||
-							Volume: ${result.ticker.vol}`,text, {quoted: mek})
+							client.sendMessage(from, `Cotação BTC: \nAlta: ${result.ticker.high}\nBaixa: ${result.ticker.low}\nAtual: ${result.ticker.last}\nVolume: ${result.ticker.vol}`,text, {quoted: mek})
 						}
 					}).catch((error) => { client.sendMessage(from, `O seguinte erro ocorreu: ${error}`, text, {quoted: mek}); });
 					break
@@ -730,12 +725,7 @@ if (text.includes("placa"))
 					client.sendMessage(from, `Obtendo cotação do ETH, arguarde...`, text, {quoted: mek});
 					await fetchJson(`https://www.mercadobitcoin.net/api/ETH/ticker/`).then((result)=>{
 						if(result.ticker){
-							client.sendMessage(from, `
-							Cotação ETH: \n
-							Alta: ${result.ticker.high} 	|| 
-							Baixa: ${result.ticker.low} 	||
-							Atual: ${result.ticker.last} 	||
-							Volume: ${result.ticker.vol}`, text, {quoted: mek})
+							client.sendMessage(from, `Cotação ETH: \nAlta: ${result.ticker.high}\nBaixa: ${result.ticker.low}\nAtual: ${result.ticker.last}\nVolume: ${result.ticker.vol}`, text, {quoted: mek})
 						}
 					}).catch((error) => { client.sendMessage(from, `O seguinte erro ocorreu: ${error}`, text, {quoted: mek}); });
 					break	
@@ -745,10 +735,7 @@ if (text.includes("placa"))
 						if(result.tickers){
 							result.tickers.forEach(ticker => {
 								if(ticker.target === 'BRL' && ticker.market.identifier === 'binance'){
-									client.sendMessage(from, `
-									Cotação DOGE: \n
-									Atual: ${ticker.last} ||
-									Volume: ${ticker.volume}`,text, {quoted: mek})
+									client.sendMessage(from, `Cotação DOGE: \nAtual: ${ticker.last}\nVolume: ${ticker.volume}`,text, {quoted: mek})
 								}
 							});
 						}
@@ -756,39 +743,52 @@ if (text.includes("placa"))
 					break
 				case 'cripto':
 					if (args.length < 1) return reply('Cadê o código da Cripto tio?');
+					
 					const cripto = args[0];
+					
 					client.sendMessage(from, `Obtendo cotação do ${cripto}, aguarde...`, text, {quoted: mek});
+					
 					var result = await fetchJson(`https://api.coingecko.com/api/v3/coins/${cripto}/tickers`);
-					if(result.tickers){
-						let ticker = result.tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
+
+					if(result.tickers != null && result.tickers.length > 0){
+						const tickers = result.tickers;
+						let ticker = tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
 						
-						if(!ticker){
-							ticker = result.tickers.find(x => x.target == "BRL");
+						if(ticker == null){
+							ticker = tickers.find(x => x.target == "BRL");
 						}
 						
-						if(!ticker){
-							ticker = result.tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
+						if(ticker == null){
+							ticker = tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
 						}
 
-						if(!ticker){
-							ticker = result.tickers.find(x => x.target == "USD");
+						if(ticker == null){
+							ticker = tickers.find(x => x.target == "USD");
 						}
 
-						if(ticker){
-							client.sendMessage(from, `
-							Cotação da moeda ${ticker.base}: \n
-							Valor atual: ${(ticker.target == "BRL" ? "R$" : "$")} ${ticker.last}
-							Volume: ${ticker.volume}
-							Porcentagem do BAS: ${(ticker.bid_ask_spread_percentage*100)}%
-							Info atualizada: ${ticker.is_stale ? "Não" : "Sim"} 
-							\nMercado: ${ticker.market.name}`,text, {quoted: mek});
+						if(ticker != null){
+							client.sendMessage(from, `Cotação da moeda ${ticker.base}: \nValor atual: ${(ticker.target == "BRL" ? "R$" : "$")} ${ticker.last}\nVolume: ${ticker.volume}\nPorcentagem do BAS: ${(ticker.bid_ask_spread_percentage*100)}%\nInfo atualizada: ${ticker.is_stale ? "Não" : "Sim"} \nMercado: ${ticker.market.name}`,text, {quoted: mek});
 						}else{
 							client.sendMessage(from, `Não foi possível encontrar dados para Cripto ${cripto}`,text, {quoted: mek});
 						}
 					}else{
 						return reply(`Nada foi encontrado para cripto ${cripto}, verifique se digitou o código correto`);
 					}
-					break;				
+					break;	
+				case 'ativo':
+					if (args.length < 5) return reply('Cadê o código da Ação tio?');
+					const ativo = args[0];
+					client.sendMessage(from, `Obtendo informações do ativo ${ativo}, aguarde...`, text, {quoted: mek});
+
+					var result = await fetchJson(`https://api.hgbrasil.com/finance/stock_price?key=9ccc1cff&symbol=${ativo}`);
+					const ativoResult = result.results[`${String(ativo).toUpperCase()}`];
+
+					if(ativoResult.error == true || result.results.error == true){
+						client.sendMessage(from, `Não foi possível encontrar dados para o *Ativo ${ativo}*`,text, {quoted: mek});
+					}else{	
+						client.sendMessage(from, `*${ativoResult.company_name}*\nValor: ${ativoResult.currency == "BRL" ? "R$" : "$"} ${ativoResult.price}\nVariação: ${ativoResult.change_percent}%\nCapital: ${ativoResult.currency == "BRL" ? "R$" : "$"} ${ativoResult.market_cap}\nAtualizado em: ${ativoResult.updated_at}`,text, {quoted: mek});
+					}
+					break;						
                 case 'ytkomen':
 					if (args.length < 1) return reply('Cadê o texto tio?')
 					gh = body.slice(9)
