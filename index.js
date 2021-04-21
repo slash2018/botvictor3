@@ -207,7 +207,7 @@ async function starts() {
 		start('2', 'Quase la...')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado leke')
+		success('2', 'Conectado')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -242,7 +242,7 @@ async function starts() {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
 		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
+			console.log('ERRO : %s', color(e, 'red'))
 		}
 	})
 
@@ -638,7 +638,7 @@ if (text.includes("placa"))
 		   if (messagesC.includes("adm")){
 		   client.updatePresence(from, Presence.composing)
 		   tujuh = fs.readFileSync('./assets/wpp1.mp4');
-		   client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+		   client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 	}
 	
 				if (messagesC.includes("mandememe")){
@@ -656,10 +656,10 @@ if (text.includes("placa"))
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
-			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do leke', color(sender.split('@')[0]), 'args :', color(args.length))
-			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do leke', color(sender.split('@')[0]), 'args :', color(args.length))
-			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
-			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do leke', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do usuario', color(sender.split('@')[0]), 'args :', color(args.length))
+			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do usuario', color(sender.split('@')[0]), 'args :', color(args.length))
+			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'do usuario', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
+			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'do usuario', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			switch(command) {
 				case 'help':
 				case 'menu':
@@ -676,7 +676,7 @@ if (text.includes("placa"))
 						bufferv = await getBuffer(res.result)
 						client.sendMessage(from, bufferv, image, {quoted: mek, caption: 'ezzzz'})
 					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
+						console.log(`ERRO :`, color(e,'red'))
 						sa = await getBuffer(`https://i.ibb.co/JcSjmNY/IMG-20210107-WA0052.jpg`)
 						client.sendMessage(from, sa, image, {quoted: mek, caption: 'Erro como!!'})
 						reply('❌ *ERRO* ❌')
@@ -2073,7 +2073,7 @@ break
 						buffer = await getBuffer(res.result)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Não faça ingredientes para o tio comum'})
 					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
+						console.log(`ERRO :`, color(e,'red'))
 						reply('❌ *ERRO* ❌')
 					}
 					break
@@ -4006,11 +4006,11 @@ break
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'eita bixo comando não registrado de', color(sender.split('@')[0]))
+						console.log(color('[ERRO]','red'), 'comando não registrado de', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
+			console.log('ERRO : %s', color(e, 'red'))
 		}
 	})
 }
