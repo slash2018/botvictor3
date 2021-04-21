@@ -752,15 +752,15 @@ if (text.includes("placa"))
 						if(result.tickers != null){
 							const tickers = result.tickers;
 							var ticker = null;
-							
-							ticker = tickers.find(x => x.target == "BRL" && ticker.market.identifier == "binance");
+
+							ticker = tickers.find(x => x.target == "BRL" && x.market.identifier == "binance");
 							
 							if(ticker == null){
 								ticker = tickers.find(x => x.target == "BRL");
 							}
 							
 							if(ticker == null){
-								ticker = tickers.find(x => x.target == "USD" && ticker.market.identifier == "binance");
+								ticker = tickers.find(x => x.target == "USD" && x.market.identifier == "binance");
 							}
 	
 							if(ticker == null){
