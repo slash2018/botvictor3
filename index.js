@@ -713,6 +713,41 @@ if (text.includes("placa"))
 					bufferz = await getBuffer(anu.gambar)
 					client.sendMessage(from, bufferz, image, {quoted: mek})
 					break
+				case 'btc':
+						await fetchJson(`https://www.mercadobitcoin.net/api/BTC/ticker/`).then((result)=>{
+							if(result.ticker){
+								client.sendMessage(from, `
+								Alta: ${result.ticker.high}\n 
+								Baixa: ${result.ticker.low}\n
+								Atual: ${result.ticker.last}\n
+								Volume: ${result.ticker.vol}\n`,text)
+							}
+						});
+						break
+				case 'eth':
+					await fetchJson(`https://www.mercadobitcoin.net/api/ETH/ticker/`).then((result)=>{
+						if(result.ticker){
+							client.sendMessage(from, `
+							Alta: ${result.ticker.high}\n 
+							Baixa: ${result.ticker.low}\n
+							Atual: ${result.ticker.last}\n
+							Volume: ${result.ticker.vol}\n`,text)
+						}
+					});
+					break	
+				case 'doge':
+					await fetchJson(`api.coingecko.com/api/v3/coins/dogecoin/tickers`).then((result)=>{
+						if(result.tickers){
+							result.tickers.forEach(ticker => {
+								if(ticker.target == 'BRL' && ticker.market.name == 'Binance'){
+									client.sendMessage(from, `
+									Atual: ${ticker.last}\n
+									Volume: ${ticker.volume}\n`,text)
+								}
+							});
+						}
+					});
+					break			
                 case 'ytkomen':
 					if (args.length < 1) return reply('Cadê o texto tio?')
 					gh = body.slice(9)
