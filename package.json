@@ -17,7 +17,7 @@
     "whatsapp",
     "bot"
   ],
-  "author": "MIGUEL MODZ",
+  "author": "VICTOR",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "github:adiwajshing/baileys",

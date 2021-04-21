@@ -199,7 +199,7 @@ async function starts() {
 	client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
-		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Scan the qr code above'))
+		console.log(color('[','white'), color('!','red'), color(']','white'), color('Leia o QR Code'))
 	})
 
 	fs.existsSync('./BarBar.json') && client.loadAuthInfo('./BarBar.json')
@@ -207,7 +207,7 @@ async function starts() {
 		start('2', 'Quase la...')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado leke')
+		success('2', 'Conectado')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./BarBar.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -3998,11 +3998,11 @@ break
 						console.log(muehe)
 						reply(muehe)
 					} else {
-						console.log(color('[ERROR]','red'), 'eita bixo comando não registrado de', color(sender.split('@')[0]))
+						console.log(color('[ERROR]','red'), 'comando não registrado de', color(sender.split('@')[0]))
 					}
                            }
 		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
+			console.log('ERRO : %s', color(e, 'red'))
 		}
 	})
 }
