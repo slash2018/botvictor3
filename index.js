@@ -640,6 +640,24 @@ if (text.includes("placa"))
 		   tujuh = fs.readFileSync('./assets/wpp1.mp4');
 		   client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 	}
+	if(messagesC.toLowerCase().includes("oinilp") || messagesC.toLowerCase().includes("plinio")){
+		const gtts = require('./lib/gtts')('pt-br')
+		dtt = "Cor sim, cor não, na raba da sua namorada dei tapão, forlan inocente"
+		ranm = getRandom('.mp3')
+		rano = getRandom('.ogg')
+		dtt.length > 1000 ? reply('A maior parte do texto é merda')
+		: gtts.save(ranm, dtt, function() {
+			exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+				fs.unlinkSync(ranm)
+				buff = fs.readFileSync(rano)
+				if (err) return reply('falha:(')
+				client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
+				fs.unlinkSync(rano)
+			})
+		});
+		const buffer = await getBuffer('https://pbs.twimg.com/media/D-DEsPzWkAAyL7F?format=jpg&name=large');
+		client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Comedor de casadas'});
+	}
 	
 				if (messagesC.includes("mandememe")){
 			client.updatePresence(from, Presence.composing)
@@ -2088,6 +2106,11 @@ break
 					client.sendMessage(from, '10 segundos para ir', text) // ur cods
 					}, 0) // 1000 = 1s,
 					break
+				case 'nazista':
+					const porcentagem = Math.random() * (100 - 1) + 1;
+					const buffer = await getBuffer('https://static.historiadomundo.com.br/conteudo/images/adolf-hitler-realizando-saudacao-nazista-em-foto-1939-5c45fcb1567e9.jpg');
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTAKKKK*😂 🇩🇪 卐`})
+					break;
 		        case 'gay':		
 	            	if (args.length < 1) return reply('marque seus amigos!')
 					rate = body.slice(1)
