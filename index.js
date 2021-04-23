@@ -2114,7 +2114,7 @@ break
 				case 'mamaco':
 					const percentagem = Math.floor(Math.random() * (100-1) + 1);
 					const buffer = await getBuffer('blob:https://i.imgur.com/ma6jmjh.jpg');
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE PRIMATA*\n*VOCÊ É* ${porcentagem}%\n*MACACO*😎`})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE PRIMATA*\n*VOCÊ É* ${percentagem}%\n*MACACO*😎`})
 					break;
 		        case 'gay':		
 	            	if (args.length < 1) return reply('marque seus amigos!')
