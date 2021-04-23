@@ -2110,11 +2110,9 @@ break
 					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
 					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTA*😎 🇩🇪 卐`})
-					break;
-				case 'mamaco':
-					const percentagem = Math.floor(Math.random() * (100-1) + 1);
-					const buffer = await getBuffer('https://i.imgur.com/ma6jmjh.jpg');
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE PRIMATA*\n*VOCÊ É* ${percentagem}%\n*MACACO*😎`})
+				break;
+					const bufferMacaco = await getBuffer('https://i.imgur.com/ma6jmjh.jpg');
+					client.sendMessage(from, bufferMacaco, image, {quoted: mek, caption: `MEDIDOR DE PRIMATA\n*VOCÊ É* ${arrombado}%\n*MACACO*😎`})
 					break;
 		        case 'gay':		
 	            	if (args.length < 1) return reply('marque seus amigos!')
