@@ -2112,7 +2112,7 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTA*😎 🇩🇪 卐`})
 					break;
 				case 'mamaco':
-					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
+					const percentagem = Math.floor(Math.random() * (100-1) + 1);
 					const buffer = await getBuffer('blob:https://i.imgur.com/ma6jmjh.jpg');
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE PRIMATA*\n*VOCÊ É* ${porcentagem}%\n*MACACO*😎`})
 					break;
