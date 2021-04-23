@@ -25,6 +25,13 @@ const help = (prefix) => {
 ║🐊 *${prefix}dbz*
 ║🐊 *${prefix}sandra1*
 ║🐊 *${prefix}juh*
+║🐊 *${prefix}doge*
+║🐊 *${prefix}btc*
+║🐊 *${prefix}eth*
+║🐊 *${prefix}cripto (ex: #cripto bitcoin*
+║🐊 *${prefix}nazista*
+║🐊 *${prefix}admins*
+║🐊 *${prefix}oinilp*
 ║
 ╠══✪〘 𝐌𝐄𝐍𝐔 〙✪══
 ║

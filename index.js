@@ -2108,7 +2108,7 @@ break
 					break
 				case 'nazista':
 					const porcentagem = Math.random() * (100 - 1) + 1;
-					const buffer = await getBuffer('https://static.historiadomundo.com.br/conteudo/images/adolf-hitler-realizando-saudacao-nazista-em-foto-1939-5c45fcb1567e9.jpg');
+					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTAKKKK*😂 🇩🇪 卐`})
 					break;
 		        case 'gay':		
