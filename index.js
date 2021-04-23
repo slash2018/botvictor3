@@ -2107,9 +2107,9 @@ break
 					}, 0) // 1000 = 1s,
 					break
 				case 'nazista':
-					const porcentagem = Math.random() * (100 - 1) + 1;
+					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
 					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTAKKKK*😂 🇩🇪 卐`})
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: `*MEDIDOR DE NAZISTA*\n*VOCÊ É* ${porcentagem}%\n*NAZISTA*😎 🇩🇪 卐`})
 					break;
 		        case 'gay':		
 	            	if (args.length < 1) return reply('marque seus amigos!')
