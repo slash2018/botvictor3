@@ -30,6 +30,7 @@ const help = (prefix) => {
 ║🐊 *${prefix}eth*
 ║🐊 *${prefix}cripto (ex: #cripto bitcoin*
 ║🐊 *${prefix}nazista*
+║🐊 *${prefix}mamaco*
 ║🐊 *${prefix}admins*
 ║🐊 *${prefix}oinilp*
 ║
