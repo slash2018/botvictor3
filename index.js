@@ -3520,8 +3520,8 @@ break
 					break
 				case 'sandra1':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/ket3RsD.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Mãe do miranha 😎 '})
+					bufferSandra = await getBuffer(`https://i.imgur.com/ket3RsD.jpg`)
+					client.sendMessage(from, bufferSandra, image, {quoted: mek, caption: 'Mãe do miranha 😎 '})
 					break
 				case 'juh':
 					memein = await kagApi.memeindo()
