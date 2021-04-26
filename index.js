@@ -228,8 +228,8 @@ async function starts() {
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(from, Presence.composing)
-			    tujuh = fs.readFileSync('./assets/ola.mp3');
-                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+			    penis = fs.readFileSync('./assets/ola.mp3');
+                client.sendMessage(from, penis, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
@@ -377,7 +377,7 @@ if (text.includes('cry')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            var buf = Buffer.from(ress, 'base64')
+            var buf = Buffercry.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
@@ -909,8 +909,8 @@ if (text.includes("placa"))
 					teks = `*Title* : ${anu.title}`
 					thumb = await getBuffer(anu.thumb)
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
+					bufferyt = await getBuffer(anu.result)
+					client.sendMessage(from, bufferyt, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
 					break
 		case 'iri':
 			client.sendPtt(from, './lindy/iri.mp3', {quoted: mek, ptt:true})
@@ -935,8 +935,8 @@ if (text.includes("placa"))
 					teks = `*Title* : ${anu.title}\n*Filesize* : ${anu.size}`
 					thumb = await getBuffer(anu.thumb)
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp3', filename: `${anu.title}.mp3`, quoted: mek})
+					buffermpp = await getBuffer(anu.result)
+					client.sendMessage(from, buffermpp, audio, {mimetype: 'audio/mp3', filename: `${anu.title}.mp3`, quoted: mek})
 					break
 				case 'game':
 				
@@ -966,16 +966,16 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply(pref)
 					reply(mess.wait)
 					anu = await fetchJson(`https://terhambar.com/aw/qts/?kata=${quote}&author=${wm}&tipe=${bg}`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {caption: 'Ele se tornou um irmão', quoted: mek})
+					bufferqueto = await getBuffer(anu.result)
+					client.sendMessage(from, bufferqueto, image, {caption: 'Ele se tornou um irmão', quoted: mek})
 					break
 				case 'galaxtext':
 					if (args.length < 1) return reply('o que você quer tio')
 					teks = body.slice(12)
 					if (teks.length > 8) return reply('O texto é longo, com até 8 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffergalax = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffergalax, image, {quoted: mek})
 					break
                 case 'phlogo':
 					var gh = body.slice(10)
@@ -984,8 +984,8 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					bufferph = await getBuffer(anu.result)
+					client.sendMessage(from, bufferph, image, {quoted: mek})
 					break
 				case 'primbonjodoh':
 					var gh = body.slice(14)
@@ -1078,8 +1078,8 @@ if (text.includes("placa"))
 					teks = body.slice(7)
 					if (teks.length > 9) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Propriedade do trono '+teks})
+					buffertahta = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffertahta, image, {quoted: mek, caption: 'Propriedade do trono '+teks})
 					break
 				case 'testing':
 					var gh = body.slice(5)
@@ -1088,8 +1088,8 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/watercolour?text1=${gbl3}&text2=${gbl4}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffertesting = await getBuffer(anu.result)
+					client.sendMessage(from, buffertesting, image, {quoted: mek})
 					break
 				case 'snowrite':
 					var gh = body.slice(10)
@@ -1098,8 +1098,8 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/snowwrite?text1=${gbl7}&text2=${gbl8}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffersnow = await getBuffer(anu.result)
+					client.sendMessage(from, buffersnow, image, {quoted: mek})
 					break
 				case 'marvelogo':
 					var gh = body.slice(9)
@@ -1108,24 +1108,24 @@ if (text.includes("placa"))
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffermarvel = await getBuffer(anu.result)
+					client.sendMessage(from, buffermarvel, image, {quoted: mek})
 					break
 				case 'lovemake':
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					love = body.slice(10)
 					if (love.length > 12) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+love})
+					bufferlove = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, bufferlove, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'thunder':
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					thun = body.slice(9)
 					if (thun.length > 10) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+thun})
+					bufferthunder = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, bufferthunder, image, {quoted: mek, caption: ' '+thun})
 					break
                 case 'stiltext':
                       if (args.length < 1) return reply('Cadê o texto?')
@@ -1142,8 +1142,8 @@ if (text.includes("placa"))
 					coli2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Cadê o texto?')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://zeksapi.herokuapp.com/api/watercolour?text1=${coli1}&text2=${coli2}&apikey=xptnbot352`)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffertest = await getBuffer(`https://zeksapi.herokuapp.com/api/watercolour?text1=${coli1}&text2=${coli2}&apikey=xptnbot352`)
+					client.sendMessage(from, buffertest, image, {quoted: mek})
 					break
 				case 'testing2':
 					var gh = body.slice(9)
@@ -1199,8 +1199,8 @@ if (text.includes("placa"))
 					part = body.slice(7)
 					if (part.length > 20) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {caption: 'Aqui amigo (a)', quoted: mek})
+					bufferparty = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, bufferparty, image, {caption: 'Aqui amigo (a)', quoted: mek})
 					break
 				case 'modoanime':
 					if (!isGroup) return reply(mess.only.group)
@@ -1258,8 +1258,8 @@ if (text.includes("placa"))
 					tels5 = body.slice(7)
 					if (tels5.length > 10) return reply('O texto é longo, com até 10 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: tels5})
+					bufferrt = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, bufferrt, image, {quoted: mek, caption: tels5})
 					break
 				case 'water':
 					if (args.length < 1) return reply(mess.blank)
@@ -1267,8 +1267,8 @@ if (text.includes("placa"))
 					if (tels.length > 15) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tfire?text=${tels}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					bufferwt = await getBuffer(anu.result)
+					client.sendMessage(from, bufferwt, image, {quoted: mek})
 					break
                  case 'nomegp':
 		             if (args.length < 1) return reply ('o nome do grupo é: *${groupMetadata.subject}*')
@@ -1380,8 +1380,8 @@ if (text.includes("placa"))
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker)
+						bufferse = fs.readFileSync(rano)
+						client.sendMessage(from, bufferse, sticker)
 						fs.unlinkSync(rano)
 					})
 					break
@@ -1700,9 +1700,9 @@ if (text.includes("placa"))
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=${ZeksApi}`, {method: 'get'})
                if (anu.error) return reply(anu.error)
                  infomp3 = `「 *TIMELINE PLAY MP3* 」\n*• Título:* ${anu.result.title}\n*• Link:* ${anu.result.source}\n*• Tamanho:* ${anu.result.size}\n\n*ESPERE NOVAMENTE ENVIANDO POR FAVOR, NÃO SPAME O CHAT*`
-                buffer = await getBuffer(anu.result.thumbnail)
+                buffermmp3 = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                client.sendMessage(from, buffermmp3, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 await limitAdd(sender) 
                 break 
@@ -1715,8 +1715,8 @@ if (text.includes("placa"))
 					teks = `*Título* : ${anu.title}\n\n Espere 1 minuto, talvez um pouco mais porque o download de vídeos esta executando`
 					thumb = await getBuffer(anu.thumb)
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek, caption: 'Aqui mano'})
+					buffersmu = await getBuffer(anu.result)
+					client.sendMessage(from, buffersmu, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek, caption: 'Aqui mano'})
 					await limitAdd(sender) 	
 					break  
 				case 'ttp':
@@ -1805,16 +1805,16 @@ if (text.includes("placa"))
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=${TobzApi}`)
 			hepi = data.result[0] 
 			teks = `*Nome*: ${data.result[0].title}\n*editor*: ${hepi.publisher}\n*mod info:* ${hepi.mod_info}\n*Tamanho*: ${hepi.size}\n*última versão*: ${hepi.latest_version}\n*gênero*: ${hepi.genre}\n*link:* ${hepi.link}\n*download*: ${hepi.download}`
-			buffer = await getBuffer(hepi.image)
-			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
+			bufferdrd = await getBuffer(hepi.image)
+			client.sendMessage(from, bufferdrd, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
 		case 'happymod':
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=${TobzApi}`)
 			hupo = data.result[0] 
 			teks = `*Nome*: ${data.result[0].title}\n*versão*: ${hupo.version}\n*Tamanho:* ${hupo.size}\n*root*: ${hupo.root}\n*compra*: ${hupo.price}\n*link*: ${hupo.link}\n*download*: ${hupo.download}`
-			buffer = await getBuffer(hupo.image)
-			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
+			bufferhpp = await getBuffer(hupo.image)
+			client.sendMessage(from, bufferhpp, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
 	
@@ -1866,8 +1866,8 @@ if (text.includes("placa"))
 					reply (mess.wait)
 					exec(`wget ${anu.result} -O ${cry} && ffmpeg -i ${cry} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(cry)
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffercrt = fs.readFileSync(rano)
+						client.sendMessage(from, buffercrt, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender) 
@@ -1953,8 +1953,8 @@ break
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffernan = fs.readFileSync(rano)
+						client.sendMessage(from, buffernan, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender)
@@ -1969,8 +1969,8 @@ break
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffercum = fs.readFileSync(rano)
+						client.sendMessage(from, buffercum, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender)
@@ -1985,8 +1985,8 @@ break
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						bufferpo = fs.readFileSync(rano)
+						client.sendMessage(from, bufferpo, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender)
@@ -2102,8 +2102,8 @@ break
 				    try {
 						if (!isNsfw) return reply('❌ *FALSO* ❌')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwblowjob`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Não faça ingredientes para o tio comum'})
+						bufferbl = await getBuffer(res.result)
+						client.sendMessage(from, bufferbl, image, {quoted: mek, caption: 'Não faça ingredientes para o tio comum'})
 					} catch (e) {
 						console.log(`ERRO :`, color(e,'red'))
 						reply('❌ *ERRO* ❌')
@@ -2185,8 +2185,8 @@ break
 				    try {
 						if (!isNsfw) return reply('❌ *FALSO* ❌')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni Anjim'})
+						buffernk = await getBuffer(res.result)
+						client.sendMessage(from, buffernk, image, {quoted: mek, caption: 'ni Anjim'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERRO* ❌')
@@ -2196,8 +2196,8 @@ break
 				    try {
 						if (!isNsfw) return reply('❌ *FALSO* ❌')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni Anjim'})
+						buffertr = await getBuffer(res.result)
+						client.sendMessage(from, buffertr, image, {quoted: mek, caption: 'ni Anjim'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERRO* ❌')
@@ -2210,8 +2210,8 @@ break
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/kiss?apikey=${TobzApi}`, {method: 'get'})
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						bufferkss = fs.readFileSync(rano)
+						client.sendMessage(from, bufferkss, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender) 
@@ -2398,9 +2398,9 @@ break
 					ige = body.slice(9)
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.vhtear.com/igprofile?query=${ige}&apikey=ANTIGRATISNIHANJENKKK`, {method: 'get'})
-					buffer = await getBuffer(anu.result.picture)
+					bufferig = await getBuffer(anu.result.picture)
 					capt = `User Ditemukan!!\n\n*➸ Nama :* ${anu.result.full_name}\n*➸ Username :* ${anu.result.username}\n*➸ Followers :* ${anu.result.follower}\n*➸ Mengikuti :* ${anu.result.follow}\n*➸ Jumlah Post :* ${anu.result.post_count}\n*➸ Private :* ${anu.result.is_private}\n*➸ Bio :* ${anu.result.biography}`
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: capt})
+					client.sendMessage(from, bufferig, image, {quoted: mek, caption: capt})
 					break
 				//lgiproses
 				case 'tesss':
@@ -2409,8 +2409,8 @@ break
 					if (teks.length > 8) return reply('O texto é longo, com até 8 caracteres')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/leavest?text=${teks}&apikey=xptnbot352`)
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffertsss = await getBuffer(anu.result)
+					client.sendMessage(from, buffertsss, image, {quoted: mek})
 					break
                                 case 'mining':
                                         if (isLimit(sender)) return reply(ind.limitend(pushname))
@@ -2430,8 +2430,8 @@ break
 			    case 'waifu':
 				    try {
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
-						buffer = await getBuffer(res.image)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ksksksks hmm'})
+						bufferwf = await getBuffer(res.image)
+						client.sendMessage(from, bufferwf, image, {quoted: mek, caption: 'ksksksks hmm'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
@@ -2441,9 +2441,9 @@ break
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					buffer = await getBuffer(anu.image)
+					bufferwf2 = await getBuffer(anu.image)
 					waifu = `*${anu.desc}`
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: waifu})
+					client.sendMessage(from, bufferwf2, image, {quoted: mek, caption: waifu})
 					break
 				case 'text3d':
               	    if (args.length < 1) return reply('Onde está o texto, irmão??')
@@ -2456,14 +2456,14 @@ break
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					bufferim = await getBuffer(anu.result)
+					client.sendMessage(from, bufferim, image, {quoted: mek})
 					break
 				case 'wibu':
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.vhtear.com/randomwibu&apikey=ANTIGRATISNIHANJENKKK`)
 					if (anu.error) return reply(anu.error)
-					buffer = await getBuffer(anu.result.foto)
+					bufferwibu = await getBuffer(anu.result.foto)
 					wibu = ` ➸ *nome* ${anu.result.nama} ➸ *descrição* ${anu.result.deskripsi}`
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: wibu})
 					break
@@ -2644,8 +2644,8 @@ break
 				exec(`wget ${anu} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffersti = fs.readFileSync(rano)
+						client.sendMessage(from, buffersti, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					break
@@ -2754,8 +2754,8 @@ break
 					reply(mess.wait)
 					anu = await fetchJson(`https://api.vhtear.com/randomcat?apikey=ANTIGRATISNIHANJENKKK`)
 					if (anu.error) return reply(anu.error)
-					buffer = await getBuffer(anu.result.url)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffercat = await getBuffer(anu.result.url)
+					client.sendMessage(from, buffercat, image, {quoted: mek})
 					break
 				case 'mlherolist':
 					reply(mess.wait)
@@ -2766,8 +2766,8 @@ break
 			    case 'randomanime':
 				    try {
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni randomanime!'})
+						bufferann = await getBuffer(res.result)
+						client.sendMessage(from, bufferann, image, {quoted: mek, caption: 'ni randomanime!'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
@@ -2777,8 +2777,8 @@ break
 				    try {
 						if (!isNsfw) return reply('❌ *FALSE* ❌')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'hentai teros'})
+						bufferhentt = await getBuffer(res.result)
+						client.sendMessage(from, bufferhentt, image, {quoted: mek, caption: 'hentai teros'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
@@ -2793,9 +2793,9 @@ break
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*MUSICA ENCONTRADA!!!*\nTítulo : ${anu.result.title}\nUrl : ${anu.result.source}\nTamanho : ${anu.result.size}\n\n*ESPERE UM POUQUINHO, N SPAME O CHAT*`
-                buffer = await getBuffer(anu.result.thumbnail)
+                bufferplay = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                client.sendMessage(from, bufferplay, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 await limitAdd(sender)
                 break
@@ -2811,8 +2811,8 @@ break
 					teks = body.slice(12)
 					if (teks.length > 8) return reply('O texto é longo, com até 8 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					bufferglls= await getBuffer(`https://api.vhtear.com/galaxytext?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, bufferglls, image, {quoted: mek})
 					break
                 case 'phlogo':
 					var gh = body.slice(10)
@@ -2821,8 +2821,8 @@ break
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/textpro?theme=pornhub&text1=${gbl1}&text2=${gbl2}`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					bufferphh = await getBuffer(anu.result)
+					client.sendMessage(from, bufferphh, image, {quoted: mek})
 					break
 				case 'primbonjodoh':
 					var gh = body.slice(14)
@@ -2866,8 +2866,8 @@ break
 					teks = body.slice(7)
 					if (teks.length > 9) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Harta Tahta '+teks})
+					buffertatt = await getBuffer(`https://api.vhtear.com/hartatahta?text=${teks}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffertatt, image, {quoted: mek, caption: 'Harta Tahta '+teks})
 					break
 				case 'testing':
 					var gh = body.slice(5)
@@ -2876,8 +2876,8 @@ break
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/watercolour?text1=${gbl3}&text2=${gbl4}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer1212 = await getBuffer(anu.result)
+					client.sendMessage(from, buffer1212, image, {quoted: mek})
 					break
 				case 'snowrite':
 					var gh = body.slice(10)
@@ -2886,8 +2886,8 @@ break
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/snowwrite?text1=${gbl7}&text2=${gbl8}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer111 = await getBuffer(anu.result)
+					client.sendMessage(from, buffer111, image, {quoted: mek})
 					break
 				case 'marvelogo':
 					var gh = body.slice(9)
@@ -2896,8 +2896,8 @@ break
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/marvellogo?text1=${gbl5}&text2=${gbl6}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer123 = await getBuffer(anu.result)
+					client.sendMessage(from, buffer123, image, {quoted: mek})
 					break
 				case 'animehug':
 					ranp = getRandom('.gif')
@@ -2907,8 +2907,8 @@ break
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(mess.error.stick)
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffer1231 = fs.readFileSync(rano)
+						client.sendMessage(from, buffer1231, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					break
@@ -2917,16 +2917,16 @@ break
 					love = body.slice(10)
 					if (love.length > 12) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+love})
+					buffer1234 = await getBuffer(`https://api.vhtear.com/lovemessagetext?text=${love}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer1234, image, {quoted: mek, caption: ' '+love})
 					break
 				case 'thunder':
 					if (args.length < 1) return reply('Cadê o texto, hum')
 					thun = body.slice(9)
 					if (thun.length > 10) return reply('O texto é longo, até 9 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: ' '+thun})
+					buffer1233 = await getBuffer(`https://api.vhtear.com/thundertext?text=${thun}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer1233, image, {quoted: mek, caption: ' '+thun})
 					break
                 case 'stiltext':
                       if (args.length < 1) return reply('Cadê o texto?')
@@ -2943,8 +2943,8 @@ break
 					coli2 = gh.split("|")[1];
 					if (args.length < 1) return reply('Cadê o texto?')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://zeksapi.herokuapp.com/api/watercolour?text1=${coli1}&text2=${coli2}&apikey=xptnbot352`)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer3331 = await getBuffer(`https://zeksapi.herokuapp.com/api/watercolour?text1=${coli1}&text2=${coli2}&apikey=xptnbot352`)
+					client.sendMessage(from, buffer3331, image, {quoted: mek})
 					break
 				case 'teste2':
 					var gh = body.slice(9)
@@ -2972,24 +2972,24 @@ break
 					if (args.length < 1) return reply(mess.blank)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${tels3}&text2=${tels4}`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer3332 = await getBuffer(anu.result)
+					client.sendMessage(from, buffer3332, image, {quoted: mek})
 					break
 				case 'party':
 					if (args.length < 1) return reply(mess.blank)
 					part = body.slice(7)
 					if (part.length > 20) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {caption: 'Aqui mana', quoted: mek})
+					buffer3333 = await getBuffer(`https://api.vhtear.com/partytext?text=${part}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer3333, image, {caption: 'Aqui mana', quoted: mek})
 					break
 				case 'rtext':
 					if (args.length < 1) return reply(mess.blank)
 					tels5 = body.slice(7)
 					if (tels5.length > 10) return reply('O texto é longo, com até 10 caracteres')
 					reply(mess.wait)
-					buffer = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: tels5})
+					buffer3334 = await getBuffer(`https://api.vhtear.com/romancetext?text=${tels5}&apikey=ANTIGRATISNIHANJENKKK`)
+					client.sendMessage(from, buffer3334, image, {quoted: mek, caption: tels5})
 					break
 				case 'water':
 					if (args.length < 1) return reply(mess.blank)
@@ -2997,8 +2997,8 @@ break
 					if (tels.length > 15) return reply('O texto é muito longo, até 20 caracteres')
 					reply(mess.wait)
 					anu = await fetchJson(`https://zeksapi.herokuapp.com/api/tfire?text=${tels}&apikey=xptnbot352`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffer1222 = await getBuffer(anu.result)
+					client.sendMessage(from, buffer1222, image, {quoted: mek})
 					break
 				case 'firetext':
 					if (args.length < 1) return reply(mess.blank)
@@ -3120,8 +3120,8 @@ break
 						client.sendMessage(from, teks, text, {contextInfo:{"mentionedJid":[me.jid]}})
 						return;
 					}
-					buffer = await getBuffer(me.imgUrl)
-					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
+					buffer67 = await getBuffer(me.imgUrl)
+					client.sendMessage(from, buffer67, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
                 case 'blowjob':
 					ranp = getRandom('.gif')
@@ -3131,8 +3131,8 @@ break
 					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 						fs.unlinkSync(ranp)
 						if (err) return reply(ind.stikga())
-						buffer = fs.readFileSync(rano)
-						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						buffer66 = fs.readFileSync(rano)
+						client.sendMessage(from, buffer66, sticker, {quoted: mek})
 						fs.unlinkSync(rano)
 					})
 					await limitAdd(sender)
@@ -3374,8 +3374,8 @@ break
 					gatauda = body.slice(6)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/nekonime?apikey=BotWeA`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
+					buffernkk = await getBuffer(anu.result)
+					client.sendMessage(from, buffernkk, image, {quoted: mek})
                     await limitAdd(sender)
 					break	
 					case 'cekvip': 
@@ -3448,75 +3448,75 @@ break
 				    if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdU0UmT8RigE3Hbr80gmigjb2AdnPJklcQ3A&usqp=CAU`)
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/11/novinha-petuda-fotos-4.jpg`)
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqWoYHFA_SDgUip6MtvimWRdub_lshAn5Edg&usqp=CAU`)
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvLmbqW9LeOCpXiGxgu3By4eQEmJM2Xp26Q&usqp=CAU`)
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnhmpQD1C1Dp7I2_kpi13gAsuoudOPPraog&usqp=CAU`)
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/prima-novinha-pelada-6.jpg`)
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-5.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-6.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-7.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-8.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-10.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					buffer = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-16.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'heheheheheh'})
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'k'})
+					bufferporno = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdU0UmT8RigE3Hbr80gmigjb2AdnPJklcQ3A&usqp=CAU`)
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/11/novinha-petuda-fotos-4.jpg`)
+					bufferporno = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqWoYHFA_SDgUip6MtvimWRdub_lshAn5Edg&usqp=CAU`)
+					bufferporno = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwvLmbqW9LeOCpXiGxgu3By4eQEmJM2Xp26Q&usqp=CAU`)
+					bufferporno = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcnhmpQD1C1Dp7I2_kpi13gAsuoudOPPraog&usqp=CAU`)
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/prima-novinha-pelada-6.jpg`)
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-5.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-6.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-7.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-8.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-10.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					bufferporno = await getBuffer(`https://fotosdemulheresnuas.net/wp-content/uploads/2018/12/Mia-Khalifa-fotos-16.jpg`)
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'heheheheheh'})
+					client.sendMessage(from, bufferporno, image, {quoted: mek, caption: 'k'})
 					break
 				case 'belle2':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.pinimg.com/originals/24/5f/91/245f91208f9030724dbc8d1bede2e9ff.gif`)
-					client.sendMessage(from, buffer, sticker, {quoted: mek, caption: 'esperava mais d vc, mas ta ae a foto'})
+					bufferbelle = await getBuffer(`https://i.pinimg.com/originals/24/5f/91/245f91208f9030724dbc8d1bede2e9ff.gif`)
+					client.sendMessage(from, bufferbelle, sticker, {quoted: mek, caption: 'esperava mais d vc, mas ta ae a foto'})
 					break
 				case 'bot':
 			     	memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*Comandos basicos para bot:*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*ADM VICTOR NO CONTROLE*'})
+					bufferbot = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
+					client.sendMessage(from, bufferbot, image, {quoted: mek, caption: '*Comandos basicos para bot:*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*ADM VICTOR NO CONTROLE*'})
 					break
 				case 'belle3':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://1.bp.blogspot.com/-3K_b14RzHTA/XwTW7SQTPRI/AAAAAAAAPtY/UOaKURECbzwXfvASa3g6Pz0D_Ha73Dw4wCLcBGAsYHQ/s1600/boabronha_10.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'olha p isso mano, pqp '})
+					bufferbelle1 = await getBuffer(`https://1.bp.blogspot.com/-3K_b14RzHTA/XwTW7SQTPRI/AAAAAAAAPtY/UOaKURECbzwXfvASa3g6Pz0D_Ha73Dw4wCLcBGAsYHQ/s1600/boabronha_10.jpg`)
+					client.sendMessage(from, bufferbelle1, image, {quoted: mek, caption: 'olha p isso mano, pqp '})
 					break
 				case 'akeno':
 					meme = await kagApi.memes()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFAocqaur5ZX1DPN6ZGP8PJy2cNppas_gYA&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					bufferakeno = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnFAocqaur5ZX1DPN6ZGP8PJy2cNppas_gYA&usqp=CAU`)
+					client.sendMessage(from, bufferakeno, image, {quoted: mek, caption: '.......'})
 					break
 				case 'loli1':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/iphQUGi.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'hmm, então quer ver loli?'})
+					bufferloli = await getBuffer(`https://i.imgur.com/iphQUGi.jpg`)
+					client.sendMessage(from, bufferloli, image, {quoted: mek, caption: 'hmm, então quer ver loli?'})
 					break
 				case 'hentai':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/XJB74uF.png`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Cara bate pra 2d 😂'})
+					bufferhentai = await getBuffer(`https://i.imgur.com/XJB74uF.png`)
+					client.sendMessage(from, bufferhentai, image, {quoted: mek, caption: 'Cara bate pra 2d 😂'})
 					break
 				case 'bomdia':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/DXVZ8vs.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Bom dia, vcs sao fodas ❤️'})
+					bufferdia = await getBuffer(`https://i.imgur.com/DXVZ8vs.jpg`)
+					client.sendMessage(from, bufferdia, image, {quoted: mek, caption: 'Bom dia, vcs sao fodas ❤️'})
 					break
 				case 'boatarde':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/nSnRCIK.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Boa tarde, rapeize 😎👍'})
+					buffertarde = await getBuffer(`https://i.imgur.com/nSnRCIK.jpg`)
+					client.sendMessage(from, buffertarde, image, {quoted: mek, caption: 'Boa tarde, rapeize 😎👍'})
 					break
 				case 'boanoite':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/KbItFd7.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Boa noite fml ❤️'})
+					buffernoite = await getBuffer(`https://i.imgur.com/KbItFd7.jpg`)
+					client.sendMessage(from, buffernoite, image, {quoted: mek, caption: 'Boa noite fml ❤️'})
 					break
 				case 'sandra1':
 					memein = await kagApi.memeindo()
@@ -3525,68 +3525,68 @@ break
 					break
 				case 'juh':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/eQCSl0k.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'gostosa que faz live 😎 '})
+					bufferjuh = await getBuffer(`https://i.imgur.com/eQCSl0k.jpg`)
+					client.sendMessage(from, bufferjuh, image, {quoted: mek, caption: 'gostosa que faz live 😎 '})
 					break	
                 case 'belle':                 
 				 data = fs.readFileSync('./src/belle.js');
                  jsonData = JSON.parse(data);
                  randIndex = Math.floor(Math.random() * jsonData.length);
                  randKey = jsonData[randIndex];
-                hasil = await getBuffer(randKey.result)
+                hasil = await getbufferjuh(randKey.result)
                 sendImage(hasil, mek, '*Belle :V*')
 				break
 				case 'belle1':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7ot6RZPnXSJFFKVjPoeXHjTYyi6uk5W_mA&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '👀️'})
+					bufferbelle3 = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ7ot6RZPnXSJFFKVjPoeXHjTYyi6uk5W_mA&usqp=CAU`)
+					client.sendMessage(from, bufferbelle3, image, {quoted: mek, caption: '👀️'})
 					break
 				case 'lofi':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL9hZBPRo16fIhsIus3t1je2oAU23pQqBpfw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️💆'})
+					bufferlofi = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL9hZBPRo16fIhsIus3t1je2oAU23pQqBpfw&usqp=CAU`)
+					client.sendMessage(from, bufferlofi, image, {quoted: mek, caption: '️💆'})
 					break
 				case 'malkova':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtbo5EcVSGj-IvEVznHIgMZ9vjFptZfvprtg&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️💆'})
+					buffermalkova = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtbo5EcVSGj-IvEVznHIgMZ9vjFptZfvprtg&usqp=CAU`)
+					client.sendMessage(from, buffermalkova, image, {quoted: mek, caption: '️💆'})
 					break
 				case 'canal':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '️*canal do 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡:*\n\n https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A'})
+					buffercanal = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
+					client.sendMessage(from, buffercanal, image, {quoted: mek, caption: '️*canal do 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡:*\n\n https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A'})
 					break
 				case 'nsfwloli1':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJhzKetbU3pzhoZdaIo6qBklCzwvmCCOznbg&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Rum️'})
+					buffernsfwloli = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJhzKetbU3pzhoZdaIo6qBklCzwvmCCOznbg&usqp=CAU`)
+					client.sendMessage(from, buffernsfwloli, image, {quoted: mek, caption: 'Rum️'})
 					break
 				case 'reislin':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlc2hMIJ4PjW5tIXltrKe6xeBoKPLKTZMnQ&usqp=CAU`)
+					bufferreislin = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKlc2hMIJ4PjW5tIXltrKe6xeBoKPLKTZMnQ&usqp=CAU`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '🤭'})
 					break
 				case 'boanoite':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://imgur.com/gallery/4HeRfuO`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'boa noite ❤️'})
+					buffernoitee = await getBuffer(`https://imgur.com/gallery/4HeRfuO`)
+					client.sendMessage(from, bufferreislin, image, {quoted: mek, caption: 'boa noite ❤️'})
 					break
 				case 'bomdia':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://imgur.com/gallery/zFvzl2S`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'bom dia ❤️'})
+					bufferdia = await getBuffer(`https://imgur.com/gallery/zFvzl2S`)
+					client.sendMessage(from, bufferdia, image, {quoted: mek, caption: 'bom dia ❤️'})
 					break
 				case 'termux':
 					meme = await kagApi.memes()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgADDq_64EbTI0NroP7CUoVeWmu1J06NnGHw&usqp=CAU`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Terminal é um programa muito conhecido no mundo das distribuições Linux. Ele é uma ferramenta que facilita muito nas tarefas relacionadas ao sistema. Agora, já pensou em utilizar o Terminal Linux no seu Android? Esta é a proposta do Termux.\n\n*TERMUX: UTILIZE O TERMINAL NO SEU ANDROID*\n\nA utilização do Terminal aumenta muito a produtividade do usuário que já possui um determinado nível de conhecimento técnico.\nCom o terminal, é possível fazer diversas e diferentes coisas, desde navegar entre os diretórios e instalar programas, até descompactar arquivos e monitorar os processos.'})
+					buffertermux = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgADDq_64EbTI0NroP7CUoVeWmu1J06NnGHw&usqp=CAU`)
+					client.sendMessage(from, buffertermux, image, {quoted: mek, caption: 'Terminal é um programa muito conhecido no mundo das distribuições Linux. Ele é uma ferramenta que facilita muito nas tarefas relacionadas ao sistema. Agora, já pensou em utilizar o Terminal Linux no seu Android? Esta é a proposta do Termux.\n\n*TERMUX: UTILIZE O TERMINAL NO SEU ANDROID*\n\nA utilização do Terminal aumenta muito a produtividade do usuário que já possui um determinado nível de conhecimento técnico.\nCom o terminal, é possível fazer diversas e diferentes coisas, desde navegar entre os diretórios e instalar programas, até descompactar arquivos e monitorar os processos.'})
 					break
 		    	case 'grupoinfo':
                     client.updatePresence(from, Presence.composing)
                     if (!isGroup) return reply(mess.only.group)
                     ppUrl = await client.getProfilePicture(from) // leave empty to get your own
-			        buffer = await getBuffer(ppUrl)
-		            client.sendMessage(from, buffer, image, {quoted: mek, caption: `*NOME* : ${groupName}\n*MEMBRO* : ${groupMembers.length}\n*ADMIN* : ${groupAdmins.length}\n*DESCRIÇÃO* : ${groupDesc}`})
+			        grupoinfo = await getBuffer(ppUrl)
+		            client.sendMessage(from, buffergrupoinfo, image, {quoted: mek, caption: `*NOME* : ${groupName}\n*MEMBRO* : ${groupMembers.length}\n*ADMIN* : ${groupAdmins.length}\n*DESCRIÇÃO* : ${groupDesc}`})
                     break
 				case 'meme':
 					reply(mess.wait)
@@ -3599,13 +3599,13 @@ break
 					break
 				case 'memeindo':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://imgur.com/${memein.hash}.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '.......'})
+					buffermemeindo = await getBuffer(`https://imgur.com/${memein.hash}.jpg`)
+					client.sendMessage(from, buffermemeindo, image, {quoted: mek, caption: '.......'})
 					break
 				case 'dono':
 					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡\n*YOUTUBE:* https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A\n*WPP:* wa.me/+5511987529572\n*INSTA:* sai\n\n\nEspero que tenham gostado do bot 🐊⚜️'})
+					bufferdono = await getBuffer(`https://i.imgur.com/meZwqA5.jpg`)
+					client.sendMessage(from, bufferdono, image, {quoted: mek, caption: '*CRIADOR:* 𝓐𝓓𝓜 𝓥𝓘𝓒𝓣𝓞𝓡\n*YOUTUBE:* https://www.youtube.com/channel/UC5XgXdQO1_T9ChVLgVAiI3A\n*WPP:* wa.me/+5511987529572\n*INSTA:* sai\n\n\nEspero que tenham gostado do bot 🐊⚜️'})
 					break
 				case 'setprefix':
 					if (args.length < 1) return
@@ -3616,16 +3616,16 @@ break
 				case 'loli':
 					loli.getSFWLoli(async (err, res) => {
 						if (err) return reply('❌ *ERROR* ❌')
-						buffer = await getBuffer(res.url)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'lolizinha'})
+						bufferloli1 = await getBuffer(res.url)
+						client.sendMessage(from, bufferloli1, image, {quoted: mek, caption: 'lolizinha'})
 					})
 					break
                                 case 'lolih':
                                         gatauda = body.slice(6)
                                                             reply(mess.wait)
                                         anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomloli?apikey=BotWeA`, {method: 'get'})
-                                        buffer = await getBuffer(anu.result)
-                                        client.sendMessage(from, buffer, image, {quoted: mek})
+                                        bufferlolih = await getBuffer(anu.result)
+                                        client.sendMessage(from, bufferlolih, image, {quoted: mek})
                                         await limitAdd(sender)
                                         break
 				case 'nsfwloli':
@@ -3795,8 +3795,8 @@ break
 					teks = body.slice(7)
 					if (teks.length > 50) return reply('O texto é longo, até 50 caracteres')
 					reply('Estou fazendo, se der erro tente novamente ✓')
-					buffer = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/gg2.jpeg?text.0.text=${teks}&text.0.position.gravity=north&text.0.position.x=-12%25&text.0.position.y=44%25&text.0.size=11&text.0.color=130e0e`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*PRONTINHO ✓*'})
+					bufferggl = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/gg2.jpeg?text.0.text=${teks}&text.0.position.gravity=north&text.0.position.x=-12%25&text.0.position.y=44%25&text.0.size=11&text.0.color=130e0e`)
+					client.sendMessage(from, bufferggl, image, {quoted: mek, caption: '*PRONTINHO ✓*'})
 					break
 					//google implemente o parametro text, para um foto
                                         //com o texto escolhido na aba search.
@@ -3805,8 +3805,8 @@ break
 					teks = body.slice(7)					
 					if (teks.length > 15) return reply('O texto é longo, até 15 caracteres')
 					reply('Estou fazendo, se der erro tente novamente ✓')
-					buffer = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/pubg.png?profile=Example&text.0.text=${teks}&text.0.size=52&text.0.outline.color=0050ff&text.0.outline.blur=100&text.1.text=${teks}&text.1.size=51&text.1.background.color=002fff&text.1.outline.color=005cff&text.1.outline.blur=100`)
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: 'PRONTINHO ✓'})
+					bufferpub = await getBuffer(`https://clutamac.sirv.com/darkbots-api-bot-2021/pubg.png?profile=Example&text.0.text=${teks}&text.0.size=52&text.0.outline.color=0050ff&text.0.outline.blur=100&text.1.text=${teks}&text.1.size=51&text.1.background.color=002fff&text.1.outline.color=005cff&text.1.outline.blur=100`)
+					client.sendMessage(from, bufferpub, image, {quoted: mek, caption: 'PRONTINHO ✓'})
 					break
 					//text parametro monta uma foto template simples
                                         //do jogo pubg  
@@ -3894,8 +3894,8 @@ break
 					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 						fs.unlinkSync(media)
 						if (err) return reply('❌ Falha ao converter adesivos em imagens ❌')
-						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
+						buffertoimg = fs.readFileSync(ran)
+						client.sendMessage(from, buffertoimg, image, {quoted: mek, caption: '>//<'})
 						fs.unlinkSync(ran)
 					})
 					break
@@ -3950,8 +3950,8 @@ break
 					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
 					try {
 						pp = await client.getProfilePicture(id)
-						buffer = await getBuffer(pp)
-						client.updateProfilePicture(botNumber, buffer)
+						hab = await getBuffer(pp)
+						client.updateProfilePicture(botNumber, bufferhab)
 						mentions(`Foto do perfil atualizada com sucesso, usando a foto do perfil @${id.split('@')[0]}`, [jid], true)
 					} catch (e) {
 						reply('Putz, deu erro, a pessoa deve estar sem foto 😔')
