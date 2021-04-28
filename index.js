@@ -229,7 +229,7 @@ async function starts() {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(from, Presence.composing)
 			    buff = fs.readFileSync('./assets/bv.mp3');
-                client.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                client.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
@@ -242,7 +242,7 @@ async function starts() {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(from, Presence.composing)
 			    tchau = fs.readFileSync('./assets/tchau.mp3');
-                client.sendMessage(from, tchau, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                client.sendMessage(from, tchau, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
 			}
 		} catch (e) {
 			console.log('ERRO : %s', color(e, 'red'))
