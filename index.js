@@ -309,7 +309,7 @@ async function starts() {
 			const mod = [ownerNumber,"5511987529572@s.whatsapp.net"]//ubah nomor lo
 			const adminbotnumber = ["5511987529572@s.whatsapp.net"]//ubah nomor lo
 			const frendsowner = ["5511987529572@s.whatsapp.net"]//ubah nomor lo
-			const premium = ["5511987529572@s.whatsapp.net","5531991562881@s.whatsapp.net","558183066760@s.whatsapp.net","5513997836050@s.whatsapp.net","5511951772253@s.whatsapp.net","5515997648722@s.whatsapp.net","5515991031151@s.whatsapp.net","5511956854099@s.whatsapp.net","553898702611@s.whatsapp.net","5511995407637@s.whatsapp.net","5512996815604@s.whatsapp.net","558587524845@s.whatsapp.net","558592810834@s.whatsapp.net","5518991151675@s.whatsapp.net","5521973783067@s.whatsapp.net","5519987196273@s.whatsapp.net","5521991219578@s.whatsapp.net","5519981985831@s.whatsapp.net","5519982508615@s.whatsapp.net","5519987526431@s.whatsapp.net","556796508311@s.whatsapp.net","558599875723@s.whatsapp.net","5511977323653@s.whatsapp.net"]
+			const premium = ["5511987529572@s.whatsapp.net","5531991562881@s.whatsapp.net","558183066760@s.whatsapp.net","5513997836050@s.whatsapp.net","5511951772253@s.whatsapp.net","5515997648722@s.whatsapp.net","5515991031151@s.whatsapp.net","5511956854099@s.whatsapp.net","553898702611@s.whatsapp.net","5511995407637@s.whatsapp.net","5512996815604@s.whatsapp.net","558587524845@s.whatsapp.net","558592810834@s.whatsapp.net","5518991151675@s.whatsapp.net","5521973783067@s.whatsapp.net","5519987196273@s.whatsapp.net","5521991219578@s.whatsapp.net","5519981985831@s.whatsapp.net","5519982508615@s.whatsapp.net","5519987526431@s.whatsapp.net","556796508311@s.whatsapp.net","558599875723@s.whatsapp.net","5511977323653@s.whatsapp.net","5511959824775@s.whatsapp.net"]
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -2132,6 +2132,11 @@ break
 					const judaic = Math.floor(Math.random() * (100-1) + 1);
 					const bufferJUDEU = await getBuffer('https://i.imgur.com/HcMDPs0.jpg');
 					client.sendMessage(from, bufferJUDEU, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${judaic}%* *JUDEU*✡`})
+					break;
+				case 'pedofilo':
+					const PEDOFI = Math.floor(Math.random() * (100-1) + 1);
+					const bufferpedofilo = await getBuffer('https://i.imgur.com/CaRVIbo.jpg');
+					client.sendMessage(from, bufferpedofilo, image, {quoted: mek, caption: `_*MEDIDOR DE PEDOFILO:*_\n*VOCÊ É* *${PEDOFI}%* *PEDOFILO*🚓🚔🚨`})
 					break;
 				case 'mamaco':
 					const arrombado = Math.floor(Math.random() * (100-1) + 1);
