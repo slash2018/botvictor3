@@ -227,9 +227,9 @@ async function starts() {
 				teks = `Olá @${num.split('@')[0]}\n*BEM VINDO(A) AO GRUPO* *${mdata.subject}*\n\n*EU SOU O VICTOR, BOT DO GRUPO*\n_Regras na descrição_🤝🏻 \n*NÃO SEJA UM GHOST*\n\n\n`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				client.updatePresence(from, Presence.composing)
-			    buff = fs.readFileSync('./assets/bv.mp3');
-                client.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
+				client.updatePresence(mdata.id, Presence.composing)
+			    tujuh = fs.readFileSync('./assets/ola.mp3');
+                client.sendMessage(mdata.id, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
@@ -240,9 +240,9 @@ async function starts() {
 				teks = `tchau @${num.split('@')[0]} La se vai o Corno 😂👋\nTriste, abandonado e sozinho.`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
-				client.updatePresence(from, Presence.composing)
+				client.updatePresence(mdata.id, Presence.composing)
 			    tchau = fs.readFileSync('./assets/tchau.mp3');
-                client.sendMessage(from, tchau, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
+                client.sendMessage(mdata.id, tchau, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
 			}
 		} catch (e) {
 			console.log('ERRO : %s', color(e, 'red'))
