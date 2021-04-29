@@ -2130,8 +2130,8 @@ break
 					break;
 				case 'judeu':
 					const judaic = Math.floor(Math.random() * (100-1) + 1);
-					const bufferJUDEU = await getBuffer('https://i.imgur.com/HcMDPs0.jpg');
-					client.sendMessage(from, bufferJUDEU, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${judaic}%* *JUDEU*✡`})
+					const judeu = await getBuffer('https://i.imgur.com/cOFHFct.jpg');
+					client.sendMessage(from, judeu, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${judaic}%* *JUDEU*✡`})
 					break;
 				case 'pedofilo':
 					const pedofilooo = Math.floor(Math.random() * (100-1) + 1);
