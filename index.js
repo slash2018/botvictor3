@@ -228,7 +228,7 @@ async function starts() {
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(mdata.id, Presence.composing)
-			    tujuh = fs.readFileSync('./assets/ola.mp3');
+			    tujuh = fs.readFileSync('./assets/bv.mp3');
                 client.sendMessage(mdata.id, tujuh, MessageType.audio, {contextInfo: {"mentionedJid": [num]}, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -242,7 +242,7 @@ async function starts() {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(mdata.id, Presence.composing)
 			    tchau = fs.readFileSync('./assets/tchau.mp3');
-                client.sendMessage(mdata.id, tchau, MessageType.audio, {quoted: mek, mimetype: 'audio/mp3', ptt:true})
+                client.sendMessage(mdata.id, tchau, MessageType.audio, {contextInfo: {"mentionedJid": [num]}, mimetype: 'audio/mp4', ptt:true})
 			}
 		} catch (e) {
 			console.log('ERRO : %s', color(e, 'red'))
