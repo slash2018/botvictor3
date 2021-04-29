@@ -2125,8 +2125,8 @@ break
 					break
 				case 'nazista':
 					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
-					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐`})
+					const buffernazi = fs.readFileSync('./assets/nazi.mp4');
+					client.sendMessage(from, buffernazi, MessageType.audio, {quoted: mek,mimetype, caption:'audio/mp4', ptt:true `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐` })
 				    break;
 				case 'judeu':
 					const judaic = Math.floor(Math.random() * (100-1) + 1);
@@ -2134,9 +2134,9 @@ break
 					client.sendMessage(from, bufferJUDEU, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${judaic}%* *JUDEU*✡`})
 					break;
 				case 'pedofilo':
-					const PEDOFI = Math.floor(Math.random() * (100-1) + 1);
-					const bufferpedofilo = await getBuffer('https://i.imgur.com/CaRVIbo.jpg');
-					client.sendMessage(from, bufferpedofilo, image, {quoted: mek, caption: `_*MEDIDOR DE PEDOFILO:*_\n*VOCÊ É* *${PEDOFI}%* *PEDOFILO*🚓🚔🚨`})
+					const pedofilooo = Math.floor(Math.random() * (100-1) + 1);
+					const buffpedoo = await getBuffer('https://i.imgur.com/CaRVIbo.jpg');
+					client.sendMessage(from, buffpedoo, image, {quoted: mek, caption: `_*MEDIDOR DE PEDOFILO:*_\n*VOCÊ É* *${pedofilooo}%* *PEDOFILO*🚓🚔🚨`})
 					break;
 				case 'mamaco':
 					const arrombado = Math.floor(Math.random() * (100-1) + 1);
