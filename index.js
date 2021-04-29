@@ -2129,9 +2129,9 @@ break
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐`})
 				    break;
 				case 'judeu':
-					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
+					const judaic = Math.floor(Math.random() * (100-1) + 1);
 					const bufferJUDEU = await getBuffer('https://i.imgur.com/HcMDPs0.jpg');
-					client.sendMessage(from, bufferJUDEU, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${porcentagem}%* *JUDEU*✡`})
+					client.sendMessage(from, bufferJUDEU, image, {quoted: mek, caption: `_*MEDIDOR DE JUDEU:*_\n*VOCÊ É* *${judaic}%* *JUDEU*✡`})
 					break;
 				case 'mamaco':
 					const arrombado = Math.floor(Math.random() * (100-1) + 1);
