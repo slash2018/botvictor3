@@ -2125,9 +2125,9 @@ break
 					break
 				case 'nazista':
 					const porcentagem = Math.floor(Math.random() * (100-1) + 1);
-					const buffernazi = fs.readFileSync('./assets/nazi.mp4');
-					client.sendMessage(from, buffernazi, MessageType.audio, {quoted: mek,mimetype, caption:'audio/mp4', ptt:true `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐` })
-				    break;
+					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐`})
+					break;
 				case 'judeu':
 					const judaic = Math.floor(Math.random() * (100-1) + 1);
 					const bufferJUDEU = await getBuffer('https://i.imgur.com/HcMDPs0.jpg');
