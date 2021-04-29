@@ -229,7 +229,7 @@ async function starts() {
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.updatePresence(mdata.id, Presence.composing)
 			    tujuh = fs.readFileSync('./assets/ola.mp3');
-                client.sendMessage(mdata.id, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                client.sendMessage(mdata.id, tujuh, MessageType.audio, {contextInfo: {"mentionedJid": [num]}, mimetype: 'audio/mp4', ptt:true})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 				try {
