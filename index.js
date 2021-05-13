@@ -585,7 +585,7 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-	        if (messagesC.includes("oi")){
+	        if (messagesC.startsWith("oi")){
             client.updatePresence(from, Presence.composing)
             tujuh = fs.readFileSync('./assets/fiu.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
