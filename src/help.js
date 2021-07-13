@@ -172,6 +172,7 @@ const help = (prefix) => {
 ║🤖 *${prefix}pinterest (nome)*
 ║🤖 *${prefix}desligar (so para o dono)*
 ║🤖 *${prefix}timer*
+║🤖 *${prefix}bott*
 ║
 ╠══✪〘 𝐌𝐀𝐈𝐒 𝐀𝐋𝐆𝐔𝐍𝐒 〙✪══
 ║
