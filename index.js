@@ -3503,7 +3503,7 @@ break
 					bufferbelle = await getBuffer(`https://i.pinimg.com/originals/24/5f/91/245f91208f9030724dbc8d1bede2e9ff.gif`)
 					client.sendMessage(from, bufferbelle, sticker, {quoted: mek, caption: 'esperava mais d vc, mas ta ae a foto'})
 					break
-				case 'bott':
+				case 'boutt':
 			     	memein = await kagApi.memeindo()
 					bufferbot = await getBuffer(`https://i.imgur.com/dPUVFF6.png`)
 					client.sendMessage(from, bufferbot, image, {quoted: mek, caption: '*Comandos basicos para bot:*\n\n*pkg upgrade && pkg update*\n*pkg install git*\n*git clone (link da git)*\n*cd (repositório)*\n*bash install.sh*\n*npm start*\n\n*ADM VICTOR NO CONTROLE*'})
