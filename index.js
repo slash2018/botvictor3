@@ -626,6 +626,24 @@ if (text.includes("placa"))
 		    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
+	        if (messagesC.includes("obrigado")){
+	        client.updatePresence(from, Presence.composing)
+	        tujuh = fs.readFileSync('./assets/obrigado.mp3');
+	        client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+    }
+	
+	        if (messagesC.includes("bot")){
+	        client.updatePresence(from, Presence.composing)
+	        tujuh = fs.readFileSync('./assets/bot.mp3');
+	        client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+    }
+	
+	        if (messagesC.startsWith("te amo")){
+	        client.updatePresence(from, Presence.composing)
+	        tujuh = fs.readFileSync('./assets/teamo.mp3');
+	        client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+    }
+	
 		    if (messagesC.includes("sandra")){
 		    client.updatePresence(from, Presence.composing)
 		    tujuh = fs.readFileSync('./assets/sandra.mp3');
@@ -642,12 +660,6 @@ if (text.includes("placa"))
 		    client.updatePresence(from, Presence.composing)
 		    tujuh = fs.readFileSync('./assets/miranha.mp3');
 		    client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-	}
-	
-		   if (messagesC.includes("adm")){
-		   client.updatePresence(from, Presence.composing)
-		   tujuh = fs.readFileSync('./assets/wpp1.mp4');
-		   client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
 	}
 	
 	       if (messagesC.includes("nazista")){
@@ -1881,7 +1893,7 @@ if (text.includes("placa"))
 					})
 					await limitAdd(sender) 
 					break 
-case 'onich':
+case 'onichan':
 tujuh = fs.readFileSync('./assets/sound7.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
