@@ -2140,6 +2140,11 @@ break
 					const buffer = await getBuffer('https://i.imgur.com/sr1kBos.jpg');
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: `_*MEDIDOR DE NAZISTA:*_\n*VOCÊ É* *${porcentagem}%* *NAZISTA*😎 🇩🇪 卐`})
 					break;
+				case 'xerecuda':
+					const xoxotuda = Math.floor(Math.random() * (100-1) + 1);
+					const xota = await getBuffer('https://i.imgur.com/RJOWvRu.png');
+					client.sendMessage(from, xota, image, {quoted: mek, caption: `_*MEDIDOR DE BUCETUDA:*_\n*VOCÊ É* *${xoxotuda}%* *BUCETUDA*😍❤️ `})
+					break;
 				case 'meupau':
 					const centimetros = Math.floor(Math.random() * (100-1) + 1);
 					const cmbuffer = await getBuffer('https://i.imgur.com/a0R8J7E.jpg');

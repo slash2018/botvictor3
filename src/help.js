@@ -33,7 +33,8 @@ const help = (prefix) => {
 ║🐊 *${prefix}judeu*
 ║🐊 *${prefix}mamaco*
 ║🐊 *${prefix}pedofilo*
-🐊 *${prefix}meupau*
+║🐊 *${prefix}meupau*
+║🐊 *${prefix}xerecuda*
 ║🐊 *${prefix}admins*
 ║🐊 *${prefix}oinilp*
 ║
