@@ -2142,8 +2142,8 @@ break
 					break;
 				case 'meupau':
 					const centimetros = Math.floor(Math.random() * (100-1) + 1);
-					const buffer = await getBuffer('https://i.imgur.com/a0R8J7E.jpg');
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: `MEDIDOR DE ROLA:\n*VOCÊ TEM* ${centimetros}cm 🤝🏻`})
+					const cmbuffer = await getBuffer('https://i.imgur.com/a0R8J7E.jpg');
+					client.sendMessage(from, cmbuffer, image, {quoted: mek, caption: `MEDIDOR DE ROLA:\n*VOCÊ TEM* ${centimetros}cm 🤝🏻`})
 					break;
 				case 'judeu':
 					const judaic = Math.floor(Math.random() * (100-1) + 1);
