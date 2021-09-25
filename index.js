@@ -664,8 +664,9 @@ if (text.includes("placa"))
 	
 	       if (messagesC.includes("tigreza")){
 	       client.updatePresence(from, Presence.composing)
-	       tujuh = fs.readFileSync('./assets/tigresa.mp4');
-	       client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+	       tigresa = fs.readFileSync('./assets/tigresa.mp4');
+	       client.sendMessage(from, tigresa, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+	}
 
 	if(messagesC.toLowerCase().includes("oinilp") || messagesC.toLowerCase().includes("plinio")){
 		const gtts = require('./lib/gtts')('pt-br')
