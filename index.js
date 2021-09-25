@@ -661,6 +661,12 @@ if (text.includes("placa"))
 	       tujuh = fs.readFileSync('./assets/nazi.mp4');
 	       client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
     }
+	
+	       if (messagesC.includes("tigreza")){
+	       client.updatePresence(from, Presence.composing)
+	       tujuh = fs.readFileSync('./assets/tigresa.mp4');
+	       client.sendMessage(from, tujuh, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+
 	if(messagesC.toLowerCase().includes("oinilp") || messagesC.toLowerCase().includes("plinio")){
 		const gtts = require('./lib/gtts')('pt-br')
 		dtt = "Cor sim, cor não, na raba da sua namorada dei tapão, forlan inocente"
